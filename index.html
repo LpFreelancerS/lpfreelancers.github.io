@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <link rel="shortcut icon" href="LP_FreelancerS_logo.png" type="image/x-icon" />
+	  <link href="/manifest.json" rel="manifest" />
+	  <title>LP Freelancer Services</title>
+
+	  <meta name="description" content="Empresa de desarrollo de Paginas Web, Android Apps, Graphic Design y manejo de redes sociales">
+	  <meta name="image" content="LP_FreelancerS_logo.png">
+	  <meta name="keywords" content="web developent, graphic design, ">
+	  <meta name="author" content="Ivan Guillermo Lopez Pedreanez">
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+	  
+	  
+	  <link async="async" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Economica|Lato">
+	  <link async="async" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <script async="async" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  
+	  <link async="async" rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="lpfreelancers.css" />	
+
+	  <style>
+	     html {
+	     	box-sizing: border-box; 
+	     	background:#4285f4; 
+	     	font-family:'Economica';
+	     	font-size: 20px; 
+	     	font-weight: 200;}
+
+	     *, body {margin: 0;font-family: "Economica", sans-serif}
+	    .mySlides{display: none}
+	    #LP_logo {width:3%;margin:0 2px 0 2px;border-radius:50%;float:right}
+	  </style>
+
+	</head>
+	<body>
+
+			<!-- Navbar -->
+			<div class="w3-top">
+			  <div class="w3-bar w3-card" style='background:#fbbc05'>
+			    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="" onclick="myFunction()" title="Toggle Navigation Menu">
+			    	<i class="fa fa-bars"></i>
+			    </a>
+			    <a href="#" class="w3-bar-item w3-button w3-padding-large">INICIO</a>
+			    <a href="#servicios" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICIOS</a>
+			    <a href="#portafolio" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PORTAFOLIO</a>
+			    <a href="#contacto" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACTO</a>
+			    <div class="w3-dropdown-hover w3-hide-small">
+			      <button id="ademas_btn" class="w3-padding-large w3-button" title="ademas">ADEMÁS<i class="fa fa-caret-down"></i></button>     
+			      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+			        <a href="#oficinas" class="w3-bar-item w3-button">OFICINAS</a>
+			        <a href="#partners" class="w3-bar-item w3-button">PARTNERS</a>
+			        <a href="#rrss" class="w3-bar-item w3-button">REDES SOCIALES</a>
+			      </div>
+			    </div>
+			    
+			    <img id="LP_logo" src="LP_FreelancerS_logo.png"/>
+			  </div>
+			</div>
+
+			<!-- Navbar -->
+			<div id="navbar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+			  <a href="#cursos" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PORTAFOLIO</a>
+			  <a href="#servicios" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICIOS</a>
+			  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACTO</a>
+			</div>
+
+			  <!-- Page content -->
+			  <div class="w3-content" style="max-width:2000px;margin-top:46px;">
+
+				<!-- Automatic Slideshow Images -->
+				  <div class="mySlides w3-display-container w3-center" >
+				    <img alt="standar-lift-24horas" src="LP_FreelancerS.png" style="width:100%;opacity: ">
+				    <div class="w3-display-middle w3-container w3-text-white w3-padding-32 w3-hide-small">
+				      <h3 style=""><i><b>SOMOS TU ASCENSOR</b></i></h3>
+				      <h4><b style="">Hacia la calidad</b></h4>   
+				    </div>
+				  </div>
+
+				  <div class="mySlides w3-display-container w3-center">
+				    <img alt="standard-lift-capacitaciones" src="LP_FreelancerS.png" style="width:100%;opacity:">
+				    <div class="w3-display-middle w3-container w3-text-white w3-padding-32 w3-hide-small">
+				      <h3><i><b>MEJORANDO PARA USTEDES</b></i></h3>
+				      <h4><b>Mejorando juntos</b></h4>    
+				    </div>
+				  </div>
+
+				  <div class="mySlides w3-display-container w3-center">
+				    <img alt="standard-lift-normas" src="LP_FreelancerS.png" style="width:100%;opacity:1">
+				    <div class="w3-display-middle w3-container w3-text-white w3-padding-32 w3-hide-small">
+				      <h3><i><b>NORMAS STANDARD</b></i></h3>
+				      <h4><b>Servicio de Altura</b></h4>    
+				    </div>
+				  </div>
+
+				<!--SERVICIOS-->
+					<style>
+					#SL_title{
+						font-weight:700;
+						width:100%;
+						background:rgba(0,0,0,0.2);
+						text-shadow:8px -8px 12px #aaaaaa
+					}
+					#SL_title:hover{
+						letter-spacing: 20px ;
+						transition:all 0.6s;
+					}
+					@media(max-width:700px)
+					{
+						#ademas_btn, #SL_logo{display:none;}
+					}
+
+				</style>
+		 <div class=" w3-center w3-padding-12 headerLP" id="servicios"> <h1 id="SL_title" class="w3-wide w3-text-white headerLP">LP Freelancer Services</h1> <div class="site-wrap">
+		     <div class="panels">
+		        <div class="panel panel1"> 
+		          <p> <button class="serv_btn">ver</button></p> 
+		          <p class="centro"></p> 
+		          <p class="bajo"><span>TRADUCCION</span></p>
+		        </div>
+		        <div class="panel panel2"> 
+		          <p><button class="serv_btn">ver</button></p> 
+		          <p class="centro"></p> 
+		          <p class="bajo"><span>WEB DESIGN</span></p>
+		        </div>
+		        <div class="panel panel3"> 
+		          <p></p> 
+		          <p class="our_servs centro active"><b>Nuestros<br/>Servicios </b></p> 
+		          <p></p> 
+		        </div>
+		        <div class="panel panel4">
+		          <p><button class="serv_btn">ver</button></p> 
+		          <p class="centro"></p>
+		          <p class="bajo"><span>DIGITAL MARKETING</span></p>
+		        </div>  
+		        <div class="panel panel5"> 
+		          <p><button class="serv_btn">ver</button></p> 
+		          <p class="centro"></p>
+		          <p class="bajo"><span>GRAPHIC DESIGN</span></p>
+		        </div>
+		     </div>
+
+		      <!-- PANELS SCRIPT-->
+		      <script>
+		          const panels = document.querySelectorAll('.panel');
+
+		          function toggleOpen(){ this.classList.toggle('open'); }
+		          function toggleActive(e){  if (e.propertyName.includes('flex')){this.classList.toggle('open-active');}  }
+
+		          panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+		          panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
+		          caja_colores = ['#fff', '#000000aa', "#a212DDaa"];
+		          const centros = document.querySelectorAll('.centro');
+		          function mine(){
+		            const colores = caja_colores[Math.floor(Math.random() * 3)];
+		            document.documentElement.style.setProperty(`--color`,colores);
+		          }
+		          centros.forEach(centro => centro.addEventListener('click', mine));
+		      </script>
+
+
+		      <style>
+		          :root {--color: rgb(200,200,200);}
+		          *, *:before, *:after { box-sizing: inherit; }
+		          .our_servs {background:rgba(255,255,255,0.5);opacity:0.5;}
+		          .serv_btn{border-radius: 2%;background:rgba(220,220,220,0.8);font-weight:600;border:3px ridge rgba(220,220,222,0.9);width:25%;padding: 2% 0%;color:#444444aa;box-shadow:1px 1px 1px white;}
+		          .panels { min-height:50vh; overflow: hidden; display:flex; }
+		          .panel {  box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1); color: var(--color);  text-align: center;  align-items:center; transition: font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s; font-size: 80%; background-size:cover; background-position:center; flex:1; justify-content:center; display: flex; flex-direction:column; }
+		          .panel1 { background-image:url(translation.jpeg); } .panel2 { background-image:url(web_design.jpeg); } .panel3 { background-image:url(); }
+		          .panel4 { background-image:url(marketing_digital.jpeg); }  .panel5 { background-image:url(graphic_design.jpeg); }
+		          .panel > * {margin:0; width: 100%; height:auto; transition:transform 0.5s; display:flex; flex: 1 0 auto; justify-content:center;align-items:center; }
+		          .panel > *:first-child {transform: translateY(-100%);} 
+		          .panel.open-active > *:first-child {transform: translateY(0);} 
+		          .panel > *:last-child {transform: translateY(100%);flex-grow: 1;}
+		          .panel.open-active > *:last-child { transform: translateY(0); }
+		          .panel p { text-transform: uppercase; text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);font-size: 1em; }
+		          .panel p:nth-child(2) {font-size: 300%;}
+		          .panel.open { font-size:110%; flex: 5; color:#1155cc; }
+		          .open-active > .bajo {color:black;background-color:rgba(245,245,245,0.55);font-size:150%;flex-basis: 5;}
+
+		          	h1 {font-size:60px;font-weight:600;font-style: italic; }
+		          	.headerLP{text-shadow:2px 2px 2px #aaaaaa;}
+
+		          	@media(max-width:900px)
+		          	{
+		          		.panels{display:none;} 
+		          	}		               
+
+		            @media (max-width:768px)
+		            {
+		            	.headerLP{ font-size: 12px; }
+		            }
+
+		            .losisos {
+		            	display:flex;
+		              	flex-flow: row wrap;
+						justify-content: space-around;
+						align-items: flex-start;
+						align-content: center;
+						height: 40vh;
+						padding: 0px 10vw;
+						background-color: white;
+		            }
+
+		            .iso {
+		              		display:flex;	
+		              		flex-flow: column wrap;	              		
+							justify-content: center;
+							align-items: center;
+							align-content: center;
+		              		border-radius:50%; 
+		              		border:6px solid #dddddd; 
+		              		width:20vh; 
+		              		height:20vh;
+		              		color:black;
+		              		font-size: 16vh;
+		              		background:#12a1edaa;  
+		             		text-shadow:4px 2px 6px black;
+		            }
+
+			        .iso_cent {
+			        	align-self: flex-end;
+			        	margin-top: 20vh;
+			        }
+
+			        @media(max-width: 970px){
+				          .iso {
+				          	width:60px;
+				          	font-size:8px;
+				          	padding:3px 5px 7px 5px;
+				          	height:60px; 
+				          	border: 3px solid white;				          
+				          	vertical-align:middle;
+				          }
+				          .iso_cent {margin:0px 50px;}
+
+			        @media(max-width: 286px)
+			          	{
+			          		.iso{display:none;}
+			          	}
+		      </style>
+		      
+
+
+
+		  <!-- SERVICIOS -->
+		  		<img src="graphic_design_long.png"     alt="graphic_design"    class="align-right slide-in" 
+		       onmouseover="this.src='web_design_long.png'" 
+		       onmouseout="this.src='graphic_design_long.png'"/>
+
+		       <img src="translation_long.png"   alt="translation"  class="align-left slide-in"  
+		       onmouseover="this.src='translation_long.png'" 
+		       onmouseout="this.src='translation_long.png'"/>
+		       
+		       </div>
+		     <div class="site-wrap">
+		        <img src="digital_marketing_long.png" alt="digital_marketing" class="align-left slide-in"  
+		        onmouseover="this.src='digital_marketing_long.png'" 
+		        onmouseout="this.src='digital_marketing_long.png'"/>
+		        <img src="web_design_long.png" alt="web_design" class="align-right slide-in" 
+		        onmouseover="this.src='graphic_design_long.png'" 
+		        onmouseout="this.src='web_design_long.png'"/>
+		     </div>    
+		      
+		          <div class="w2-row w2-padding-24 isos">
+		            <h2 class="headerLP" style="word-spacing: 300%">Sistemas de Servicios</h2>
+		            <div class='losisos'>
+		              <div class="iso"> 
+		              	<br/>W<br/>
+		              </div>  
+		              <div class="iso iso_cent">
+		              	<br/>M<br/>
+		              </div>
+		              <div class="iso">
+		              	<br/>D<br/>
+		              </div>
+		            </div>
+		          </div>
+		 </div>
+
+		<h3 class="w3-wide w3-center headerLP site-wrap" style="padding-top:0%">NUESTROS SERVICIOS</h3>
+		      <div class="togglers" id="serv1">INSPECCION Y CERTIFICACION DE MAQUINAS Y EQUIPOS</div>
+		        <div class="togglers_txt" id="serv1_cont">
+		          <img alt="standard-lift-maquinas" class="togglers_img align-center slide-in" src="1.png" style="float:left;margin: 0% 3%; width:200px; height:100px"/>
+		        <p >Somos la empresa líder regional en inspección, verificación y certificación de equipo de izaje, viales, extracción, elevación y ferroviarios. Brindamos experiencia e innovación en técnicas de inspección reglamentaria o voluntaria.</p>
+		      </div>
+
+		      <div class="togglers" id="serv2">INSPECCIONAR Y CERTIFICAR RECIPIENTES SOMETIDOS A PRESION</div>
+		        <div class="togglers_txt" class="togglers_txt" id="serv2_cont">
+		          <img alt="standard-lift-equipos-bajo-presion" class="togglers_img align-center slide-in" src="2.png" style="float:left;margin: 0% 3%; width:200px; height:100px"/>
+		        <p >Como organismo independiente, certificamos la aptitud de los recipientes a presión e instalaciones asociadas a ellos, dando fe de la vigencia de su vida útil, cumpliendo normativas nacionales e internacionales.</p>
+		      </div>
+
+		      <div class="togglers" id="serv3">INSPECCIONES INDUSTRIALES</div>
+		        <div class="togglers_txt" id="serv3_cont">
+		          <img alt="standard-lift-inspeciones-industriales" class="togglers_img align-center slide-in" src="web_design_long.png" style="float:left;margin: 0% 3%; width:200px; height:100px"/>
+		        <p>Ofrecemos la independencia y confianza que necesita, para garantizar el cumplimiento de las exigencias normativas, ayudando a reducir riesgos, asegurar calidad y cantidad de inspecciones, cumplir con regulaciones exigidas en diferentes regiones y mercados.</p>
+		      </div>
+
+		      <div class="togglers" id="serv4">PRUEBAS Y ENSAYOS NO DESTRUCTIVOS (NDT/END)</div>
+		        <div class="togglers_txt" id="serv4_cont">
+		        <img alt="standard-lift-ensayos-no-destructivos" class="togglers_img align-center slide-in" src="web_design_long.png" style="float:left;margin: 0% 3%; width:200px; height:100px"/>
+		        <p>Nuestras pruebas aseguran el desempeño eficaz y seguro de sus equipos y activos, detectando defectos que previenen incidentes y accidentes y, consecuentemente, aseguran la conformidad con normas internacionales. Aplicamos procedimientos certificados, realizados por inspectores calificados y nivelados.</p>
+		      </div>
+
+		      <div class="togglers" id="serv5">ESTUDIO DE MATERIALES</div>
+		        <div class="togglers_txt" id="serv5_cont">
+		          <img alt="standard-lift-estudio-materiales" class="togglers_img align-center slide-in" src="web_design_long.png" style="float:left;margin: 0% 3%; width:200px; height:100px"/>
+		        <p >Diagnosticamos el estado actual de sus equipos y evaluamos su integridad estructural a futuro, realizando ensayos de espesores, ultrasonidos, durezas, gammagráficos en 3D, líquidos penetrantes y metrológicos.</p>
+		      </div>
+
+		      <div class="togglers" id="serv6">ASESORAMIENTO EN SEGURIDAD E HIGIENE LABORAL</div>
+		        <div class="togglers_txt" id="serv6_cont">
+		          <img alt="standard-lift-seguridad-e-higiene-industrial" class="togglers_img align-center slide-in" src="web_design_long.png" style="float:left;margin: 0% 3%; width:200px; height:100px"/>
+		        <p >Acompañamos a su empresa en la definición y aplicación de protocolos internos en Seguridad e Higiene, para cumplir con disposiciones legales vigentes y evitar gastos que afecten su economía y prestigio. Impulsamos el desarrollo de herramientas para la implementaciòn sustentable y sostenible de políticas ambientales.</p>
+		      </div>
+
+		      <div class="togglers" id="serv7">AUDITORIAS DE SEGURIDAD, certificadas por la secretaria de Energía</div>
+		        <div class="togglers_txt" id="serv7_cont">
+		          <img alt="standard-lift-auditorias-seguridad" class="togglers_img align-center slide-in" src="web_design_long.png" style="float:left;margin: 0% 3%; width:200px; height:100px"/>
+		        <p>Verificamos cumplimiento de regulaciones en Seguridad, Higiene, Salud ocupacional y  Protección ambiental, en  sus  diferentes alcances  ( municipal a internacional). Realizamos el control de condiciones operativas de instalaciones, procesos y procedimientos, tendientes a preservar la seguridad de las personas, la protección ambiental y el patrimonio empresarial.</p>
+		      </div>
+
+		      <div class="togglers" id="serv8">GESTIÓN, AUDITORÍA INTERNA,  PROVEEDORES</div>
+		        <div class="togglers_txt" id="serv8_cont">
+		          <img alt="standard-lift-gestion-proveedores" class="togglers_img align-center slide-in" src="web_design_long.png" style="float:left;margin: 0% 3%; width:200px; height:100px"/>
+		        <p>Brindamos la perspectiva amplia y profunda que necesitan nuestros clientes, en evaluación de su gestión interna y externa, poniendo a disposición nuestra experiencia y opinión independiente, que aporta un enfoque sistemático y disciplinario para evaluar sus procesos, con el compromiso de respetar la identidad política de la empresa.</p>
+		      </div>
+
+		<script> 
+		    $(document).ready(function(){     
+		           $("#serv1").click(function(){ $("#serv1_cont").slideToggle("slow"); });
+		           $("#serv2").click(function(){ $("#serv2_cont").slideToggle("slow"); });
+		           $("#serv3").click(function(){ $("#serv3_cont").slideToggle("slow"); });
+		           $("#serv4").click(function(){ $("#serv4_cont").slideToggle("slow"); });
+		           $("#serv5").click(function(){ $("#serv5_cont").slideToggle("slow"); });
+		           $("#serv6").click(function(){ $("#serv6_cont").slideToggle("slow"); });
+		           $("#serv7").click(function(){ $("#serv7_cont").slideToggle("slow"); });
+		           $("#serv8").click(function(){ $("#serv8_cont").slideToggle("slow"); });
+		           $("#serv9").click(function(){ $("#serv9_cont").slideToggle("slow"); });           
+		                            });
+		</script>
+
+		          <style> 
+		              .togglers {padding: 1px 20px;border-top: 1px solid #333; height: 50px; text-align: center;  color: white; background:linear-gradient(150deg, #24b338, #4799ad, #fbbc05) ;vertical-align:middle; font-family:Lato; font-size: 23px; font-weight: 500;font-stretch:;line-height:50px;text-align:left;text-shadow: 2px -2px 5px #333333; border-bottom: 1px border;}
+		              .togglers::before {content:'► ' ;color:rgba(0,0,220,0.8);text-shadow: 1px 0.5px 0.5px white}
+		              .togglers_txt  {padding:1%; display:none; background-color: white;border-bottom:2px solid black; color:black;font-size:19px;min-height:130px; font-weight: 120}
+
+		              @media ( max-width:905px)
+		              {.togglers {font-size: 16px} .togglers_img{width:20%;}}
+
+		              @media (max-width:600px)
+		              {.togglers {padding: 1px 10px;border-top: 0px solid #c3c3c3; height: 25px; text-align: center;  color: white; background-color:black;vertical-align:middle; font-family:Economica; font-size: 13px; font-weight: 800;font-stretch:;line-height:25px;text-align:left;}
+		              .togglers_txt{display:none; font-size:10px;min-height:100px; font-weight: 100}
+		              .togglers_img {width:21%;}
+		               }
+
+		              @media (max-width:400px)
+		              {.togglers {font-size: 11px}
+		              .togglers_img {width:20%;}
+		              }
+		          </style>
+
+		 
+		  <!-- The Tour Section -->
+		  <div class="w3-container w3-content w3-padding-24" style="max-height:12px;"></div>
+		  <div class="w3-black" id="CAPACITACIONES" style="background-image:url(digital_world.jpeg);background-repeat:no-repeat;background-size:cover">
+		      
+		    <div class="w3-container w3-content w3-padding-64" style="max-width:800px;">
+		      <h2 class="w3-black w3-center ">CAPACITACIONES</h2>
+		  
+		        
+		        <style>   
+		                   
+		            .align-center {float:left; margin-right:20px; } 
+		            .align-center.slide-in { transform:translateX(-30%) scale(0.095); }
+		            
+		        </style>
+
+		      <p class="w3-black w3-center"><i>Formamos profesionales con conocimientos sobre la seguridad en el ámbito laboral, en todos sus aspectos. Especialmente aquellos requeridos por las diferentes normativas.</i></p><br>
+
+		      <ul class="w3-ul w3-border w3-white w3-text-grey ">
+		        <li class="w3-padding" > <span class="w3-tag w3-red " style="margin: 0 5px">REQUISITOS</span><span style="float:right">Experiencia en operación de equipos</span> </li>
+		        <li class="w3-padding" style="margin:0 5px"><span class="w3-tag w3-red ">DIRIGIDO A</span><span style="float:right">Operadores de equipos autoelevadores</span></li>
+		        <li class="w3-padding"><span class="w3-tag w3-red " style="margin:0 5px">DURACIÓN</span><span style="float:right">10h teórico-prácticas</span></li>
+		         <li class="w3-padding" style="height:80px"> <span class="w3-tag w3-red " style="margin:0 5px">ENTREGABLES</span><span style="float:right">Acceso a nuestra Web via Código QR<br/>Certificados</span>
+		        </li>
+		      </ul>
+
+
+		      <div class="w3-row-padding w3-padding-32 cursos_ " style="margin:0 -16px">
+		        <div class="w3-third w3-margin-bottom">
+		          
+		          <div class="w3-container" style="background: #fbbc05">
+		            <p style="color:black"><b>Operadores Elementos de Izaje</b></p>
+		            <p class="w3-opacity w3-padding-16">8 horas - Sin requisitos previos</p>
+		            <p>Dirigido a operadores de desempeño de eslingador, operadores de grúas en general, supervisores de obra, operadores asignados a asistir el operador de equipos en maniobras de izaje, respnsables de seguridad en el trabajo</p><br/>
+		            <button class="w3-button w3-black w3-margin-bottom " onclick="document.getElementById('cursoModal').style.display='block'">+información</button>
+		          </div>
+		        </div>
+		        <div class="w3-third w3-margin-bottom">
+		          
+		          <div class="w3-container" style="background: #fbbc05">
+		             <p style="color:black"><b>Operadores de Puentes de Grúa</b></p>
+		            <p class="w3-opacity w3-padding-16">6 hs Teóricas - 2 hs prácticas</p>
+		            <p>Dirigido a operadores y supervisores con desmpeño en grúas en general, operadores asignados a asistir al operador de equipos e maniobras de izaje, operadores de mantenimiento y responsables de seguridad en el trabajo.</p><br/>
+		            <button class="w3-button w3-black w3-margin-bottom " onclick="document.getElementById('cursoModal').style.display='block'">+información</button>
+		          </div>
+		        </div>
+		        <div class="w3-third w3-margin-bottom">
+		          
+		          <div class="w3-container" style="background: #fbbc05">
+		            <p style="color:black"><b>Operadores de Grúa Móvil</b></p>
+		            <p class="w3-opacity w3-padding-16">8 horas - Sin requisitos previos</p>
+		            <p>Dirigido a operadores y supervisores con desempeño en grúas móviles, operadores asignados a sistir al operador de equipos en maniobras de izaje, operadores de mantenimiento.</p><br/>
+		            <button class="w3-button w3-black w3-margin-bottom " onclick="document.getElementById('cursoModal').style.display='block'">+información</button>
+		          </div>
+		        </div>
+		       </div> 
+
+		    <script>
+		           	let mas = 0;
+		        	   function mas_cursos(){
+		        		mas+=1;
+		        		const mas_cursos = document.querySelector('.mas_cursos');
+		        		if((mas%2)===1){mas_cursos.style.setProperty('display', 'block');}
+		        		else {mas_cursos.style.setProperty('display', 'none');};
+		    </script>
+
+
+		     <div class="w3-row-padding w3-padding-32 mas_cursos" style="margin:0 -16px">
+		        <div class="w3-third w3-margin-bottom extra_cursos">
+		          
+		          <div class="w3-container" style="background: #fbbc05">
+		            <p style="color:black"><b>Operadores de Grúa Móvil</b></p>
+		            <p class="w3-opacity">8 horas - Sin requisitos previos</p>
+		            <p>Dirigido a operadores y supervisores con desempeño en grúas móviles, operadores asignados a sistir al operador de equipos en maniobras de izaje, operadores de mantenimiento y responsables de seguridad en el trabajo.</p>
+		            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('cursoModal').style.display='block'">+información</button>
+		          </div>
+		        </div>
+
+		        <div class="w3-third w3-margin-bottom extra_cursos">
+		          
+		          <div class="w3-container" style="background: #fbbc05">
+		            <p style="color:black"><b>Operadores de Elementos de Izaje</b></p>
+		            <p class="w3-opacity">8 horas - Sin requisitos previos</p>
+		            <p>Dirigido a operadores de desempeño de eslingador, operadores de grúas en general, supervisores de obra, operadores asignados a asistir el operador de equipos en maniobras de izaje, respnsables de seguridad en el trabajo</p>
+		            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('cursoModal').style.display='block'">+información</button>
+		          </div>
+		        </div>
+
+		        <div class="w3-third w3-margin-bottom extra_cursos">
+		          
+		          <div class="w3-container" style="background: #fbbc05">
+		            <p style="color:black"><b>Operadores de Puentes de Grúa</b></p>
+		            <p class="w3-opacity">6 hs Teóricas<br/>2 hs prácticas</p>
+		            <p>Dirigido a operadores y supervisores con desmpeño en grúas en general, operadores asignados a asistir al operador de equipos e maniobras de izaje, operadores de mantenimiento.</p>
+		            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('cursoModal').style.display='block'">+información</button>
+		          </div>
+		        </div>
+		      </div>
+		      <center>
+		      	<button id="mas_cursos_btn" onclick="mas_cursos()" class="w3-button w3-red w3-margin-bottom" name="Ver más cursos">Ver más cursos</button>
+		      </center>   
+		              <style>
+		              	.mas_cursos {display:none;}
+		              	#mas_cursos_btn {content: "mas_cursos_bt";}
+		              </style>
+		    </div>
+
+		  </div>
+
+		  <!-- CURSO Modal -->
+		  <div id="cursoModal" class="w3-modal">
+		    <div class="w3-modal-content w3-animate-top w3-card-3">
+		      <header class="w3-container w3-black w3-center w3-padding-32"> 
+		        <span onclick="document.getElementById('cursoModal').style.display='none'" 
+		       class="w3-button w3-black w3-xlarge w3-display-bottomright">×</span>
+		        <h2 class="w3-wide">CAPACITACION</h2>
+		      </header>
+		        
+
+		      <div class="w3-container ">
+		        <p><label> Sobre este curso </label></p>
+		        <br/>
+		        <input class="w3-input w3-border" type="text" placeholder="Pronto tendremos información más detallada sobre este y nuestros otros cursos y capcitaciones de primer nivel mundial">
+		        
+		        <button class="w3-button w3-block w3-black w3-padding-16 w3-section w3-right"> <i class="fa fa-check">Standard Lift Certifications</i></button>
+		        <button class="w3-button w3-red w3-section" onclick="document.getElementById('cursoModal').style.display='none'">Cerrar <i class="fa fa-remove"></i></button>
+		        <p class="w3-center">más <a href="#" class="w3-text-blue">Información</a></p>
+		      </div>
+		    </div>
+		  </div>
+
+		  <style>
+		        @media(max-width:768px)
+		        {
+		        	.cursos_{display:none;}
+		        }
+		  </style>
+		  <!-- The Contact Section -->
+		  <h2 class="w3-wide w3-center">CONTACTO</h2>
+		    <p class="w3-opacity w3-center"><i>Decinos como podemos servirte</i></p>
+		  <div class="w3-container w3-content w3-padding-12" style="" id="contacto">
+		  	
+		    <div class="w3-row w3-padding-24">
+		      <div class="w3-col m6 w3-large w3-margin-bottom datos_contacto" >
+		        <i class="fa fa-map-marker" style=""></i> Peron 3366, BsAs<br>
+		        <i class="fa fa-phone" style=""></i> (+54) 11 2535 6896<br>
+		        <i class="fa fa-envelope" style="font-size:45%"> </i> lpfreelancers@gmail.com<br>
+		      </div>
+
+		    <style>
+		          .datos_contacto{font-size:12px;padding-right:4px;}
+		          @media(max-width:768)
+		          {
+		          	.datos_contacto{font-size:9px}
+		          }
+		          @media(max-width:600)
+		          {
+		          	.datos_contacto{font-size:8px}
+		          }
+		    </style>
+
+		      <div class="w3-col m6">
+		        <form action="envio.php" target="_blank" methos="post">
+		          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+		            <div class="w3-half"> 	            
+		            	<input class="w3-input w3-border" type="text" placeholder="Por favor escribe tu nombre" name="name" id="name" required autofocus>
+		            </div>
+		            <div class="w3-half"> 
+		            	<input class="w3-input w3-border" type="tel" placeholder="Porfavor especifica tu número de teléfono" name="telefono" id="telefono" required>
+		            </div>
+		          </div>        
+		           
+		          <div style="margin: 4px 0px">
+		            <input class="w3-input w3-border" style="margin: 4px 0px" type="email" placeholder="tuemail@servidor.com" name="email" id="email" required>
+		          </div>
+
+		          <div>
+		          	<textarea id="mensaje" name="mensaje" placeholder="Comienza a escribir..." style="height:50px; width:100%"></textarea>
+		          </div>
+
+		          <input class="sendButton" type="submit" name="Submit" value="Enviar">
+		        </form>
+		      </div>
+		    </div>
+		  </div>
+
+		      <h2 class="w3-wide w3-center headerLP" style="color:white;background:black;">CONTAMOS CON LA CONFIANZA DE</h2>
+		      <marquee id="partners" class="trusted_mq" align="middle" scrolldelay="20" scrollamount="8" direction="right" loop="infinite">
+		    	<h2 style="display:inline-block"> Y muchos otros</h2>
+		        <div class="marq_img"><img alt="standard-lift-adif" class="trusted" src="adif.png"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-mineduca" class="trusted"  src="mineducacion.png"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-firestone" class="trusted" src="firestone.jpeg" /></div>
+		        <div class="marq_img"> <img alt="standard-lift-subte_h" class="trusted" src="subte_h.png"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-tecpetrol" class="trusted" src="tecpetrol.jpg"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-ultramar" class="trusted" src="ultramar.jpg"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-ypf" class="trusted" src="ypf.png"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-GBA" class="trusted" src="gobBsAs.jpg"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-petroecuador" class="trusted" src="petroecuador.jpg"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-dycasa" class="trusted" src="dycasa.jpg"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-tecpetrol" class="trusted" src="tecpetrol.jpg"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-techint" class="trusted" src="techint.jpg"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-tenaris" class="trusted" src="tenaris.jpg"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-ulog" class="trusted" src="ulog.png"/></div>
+		        <div class="marq_img"> <img alt="standard-lift-total" class="trusted" src="total.png"/></div>
+		      </marquee>
+		</div>
+
+
+		        <div class="w3-container w3-content w3-padding-8" style="max-height:12px;"></div>
+		        <style>
+		              .trusted_mq {background-color:rgba(255,255,255,1);position:relative;left:0%;width:100%;}
+		              .marq_img {display:inline-block}
+		              .trusted{width:80%;  margin: 0px 12px auto }
+		         @media(max-width:768px){  .trusted{width:40%;  margin: 0px 6px auto } }
+		        </style>
+
+
+		           <h2 class="w3-wide w3-center headerLP" style="color:white;background:black;">NUESTRAS OFICINAS </h2>
+		               <div class="mySlides2 w3-display-container w3-center">
+		                  <img alt="standard-lift-sede-arg" class="map" src="map_arg.png" style="width:100%">
+		                  <div class="w3-display-bottommiddle w3-container w3-text-black w3-padding-16 w3-hide-small">
+		                    <img alt="standard-lift-" class="img_oficinas" src="arg.png"/>
+		                    <h3>ARGENTINA</h3>
+		                    <p><b>Av Rivadavia 2890 - 14º Piso Balvanera - CABA - CP1203</b></p>   
+		                  </div> 
+		               </div>
+			           <div class="mySlides2 w3-display-container w3-center">
+			              <img alt="standard-lift-sede-chile" class="map" src="map_quito.png" style="width:100%">
+			              <div class="w3-display-bottommiddle w3-container w3-text-black w3-padding-32 w3-hide-small">
+			                <img alt="standard-lift-" class="img_oficinas" src="chi.png"/>
+			                <h3>VENEZUELA</h3>
+			                <p><b>Santa Rosa 45 - Quilpue Quinta región - Viña del Mar</b></p>    
+			              </div>
+			           </div>
+			           <div class="mySlides2 w3-display-container w3-center" id="oficinas">
+			              <img alt="standard-lift-sede-lima" class="map" src="map_peru.png" style="width:100%">
+			              <div class="w3-display-bottommiddle w3-container w3-text-black w3-padding-32 w3-hide-small">
+			                <img alt="standard-lift-" class="img_oficinas" src="peru.png"/>
+			                <h3>PERU</h3>
+			                <p><b>Av Arriba Perú - Lote 19 y 20 Villa El Salvador - Lima</b></p>    
+			              </div>
+			           </div>
+		          
+		        
+		        <style>
+			        .map{filter:grayscale(100%)}
+			        .img_oficinas{width:96px;text-align:center;}
+			        @media(max-width:768px)
+			        	{
+			        		.img_oficinas{width:32px;}
+			        	}
+		    		    .mySlides2 p{
+		    		    	background:rgba(25,25,255,0.8);
+		    		    	width:100%;
+		    		    	font-size:20px;
+		    		    	font-weight: 700;
+		    		    	color:white;
+		    		    	padding: 1% 10%;
+		    		    }
+		        </style>
+		  
+		<!-- End Page Content -->
+		</div>
+		<!-- Footer -->
+			<footer id="rrss" class="w3-container w3-padding-16 w3-center w3-white w3-large">
+			  <a href="https://www.facebook.com/lpfreelancers/"><i class="fa fa-facebook-official w3-hover-opacity rrss"></i></a>
+			  <a href="https://www.instagram.com/lpfreelancers/" target="_blank"><i class="fa fa-instagram w3-hover-opacity rrss"></i></a>
+			  <a href="https://twitter.com/lpfreelancers" target="_blank"><i class="fa fa-twitter w3-hover-opacity rrss"></i></a>
+			  <a href="https://www.linkedin.com/company/lpfreelancers/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity rrss"></i></a> 
+			  <style>
+		         .rrss{
+		         	width:45px;
+		         	height:45px;
+		         	border-radius:50%;
+		         	border:3px solid rgba(0,0,210,0.7);
+		         	padding:11px 11px;
+		         	margin:0% 0.5%;
+		         	background-color:white;
+		         	color:rgba(0,0,210,0.7)
+		         }
+		         #rrss
+		         {
+					border-color: black
+		         }
+		 	  </style>
+		 	</footer>
+		     
+
+		         <script>
+		            // Automatic Slideshow - change image every 4 seconds
+		           var myIndex = 0;
+		           carousel();
+		           function carousel() {
+		             var i;
+		             var x = document.getElementsByClassName("mySlides");
+		             for (i = 0; i < x.length; i++) { x[i].style.display = "none"; }
+		             myIndex++;
+		             if (myIndex > x.length) {myIndex = 1}    
+		             x[myIndex-1].style.display = "block";  
+		             setTimeout(carousel, 4000);    
+		           }
+		           var myIndex2 = 0;
+		           carousel2();
+		           function carousel2() {
+		              var i;
+		              var y = document.getElementsByClassName("mySlides2");
+		              for (a = 0; a < y.length; a++) { y[a].style.display = "none";  }
+		              myIndex2++;
+		              if (myIndex2 > y.length) {myIndex2 = 1}    
+		              y[myIndex2-1].style.display = "block";  
+		              setTimeout(carousel2, 7500);    
+		           }
+
+		           // Used to toggle the menu on small screens when clicking on the menu button
+		           function myNavbar() {
+		              var x = document.getElementById("navbar");
+		              if (x.className.indexOf("w3-show") == -1) {x.className += " w3-show";} else {x.className = x.className.replace(" w3-show", ""); }}
+		             // When the user clicks anywhere outside of the modal, close it
+		             var modal = document.getElementById('cursoModal');
+		             window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; }
+		           }
+		         </script>
+
+
+
+		         <script>
+		            function debounce(func, wait = 20, immediate = true) {
+		              var timeout;
+		              return function() {
+		                var context = this, args = arguments;
+		                var later = function() {
+		                  timeout = null;
+		                  if (!immediate) func.apply(context, args);
+		                };
+		                var callNow = immediate && !timeout;
+		                clearTimeout(timeout);
+		                timeout = setTimeout(later, wait);
+		                if (callNow) func.apply(context, args);
+		              };
+		            };
+
+		           const sliderImages = document.querySelectorAll('.slide-in');
+		           function checkSlide(){
+		         
+		             sliderImages.forEach(sliderImage => {
+		              const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+		              const imageBottom = sliderImage.offsetTop + sliderImage.height;
+		              const isHalfShown = slideInAt > sliderImage.offsetTop;
+		              const isNotScrolledPast = window.scrollY < imageBottom;
+		                  if (isHalfShown && isNotScrolledPast) {
+		                sliderImage.classList.add('active');
+		              } else {
+		                sliderImage.classList.remove('active');
+		              }
+		            });
+		           }
+		        
+		           window.addEventListener('scroll', debounce(checkSlide));
+		         </script>
+
+
+
+		     <style>
+		        *, *:before, *:after { box-sizing: inherit; }
+		        h1 { margin-top: 0;}
+		        .site-wrap { max-width: 100%; margin: 0px auto;background:white;padding:20px; text-align: justify; }
+		        .align-left {float:left; margin-right:20px; }
+		        .align-right {float:right; margin-left:20px; }
+		        .slide-in { opacity:0; transition:all .5s; width:45%; margin:1%;}
+		        .align-left.slide-in { transform:translateX(-30%) scale(0.95); }
+		        .align-right.slide-in { transform:translateX(30%) scale(0.95); }
+		        .slide-in.active { opacity:1; transform:translateX(0%) scale(1); }
+		     </style>
+		     
+	</body>
+
+  	
+</html>
