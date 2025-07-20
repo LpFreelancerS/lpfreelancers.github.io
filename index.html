@@ -104,7 +104,7 @@
 						text-shadow:8px -8px 12px #aaaaaa
 					}
 					#SL_title:hover{
-						letter-spacing: 20px ;
+						font-size: 105% ;
 						transition:all 0.6s;
 					}
 					@media(max-width:700px)
@@ -168,10 +168,32 @@
 		          .our_servs {background:rgba(255,255,255,0.5);opacity:0.5;}
 		          .serv_btn{border-radius: 2%;background:rgba(220,220,220,0.8);font-weight:600;border:3px ridge rgba(220,220,222,0.9);width:25%;padding: 2% 0%;color:#444444aa;box-shadow:1px 1px 1px white;}
 		          .panels { min-height:50vh; overflow: hidden; display:flex; }
-		          .panel {  box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1); color: var(--color);  text-align: center;  align-items:center; transition: font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s; font-size: 80%; background-size:cover; background-position:center; flex:1; justify-content:center; display: flex; flex-direction:column; }
-		          .panel1 { background-image:url(translation.jpeg); } .panel2 { background-image:url(web_design.jpeg); } .panel3 { background-image:url(); }
-		          .panel4 { background-image:url(marketing_digital.jpeg); }  .panel5 { background-image:url(graphic_design.jpeg); }
-		          .panel > * {margin:0; width: 100%; height:auto; transition:transform 0.5s; display:flex; flex: 1 0 auto; justify-content:center;align-items:center; }
+		          .panel {
+				  box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+				  color: var(--color);  
+				  text-align: center;  
+				  align-items:center; 
+				  transition: font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s;
+				  font-size: 80%; 
+				  background-size:cover;
+				  background-position:center; 
+				  flex:1; 
+				  justify-content:center; 
+				  display: flex; 
+				  flex-direction:column; }
+		          .panel1 { background-image:url(translation.jpeg); } 
+			      .panel2 { background-image:url(web_design.jpeg); }
+			      .panel3 { background-image:url(); }
+		          .panel4 { background-image:url(marketing_digital.jpeg); }  
+			      .panel5 { background-image:url(graphic_design.jpeg); }
+		          .panel > * {
+				  margin:0; width: 100%; 
+				  height:auto; 
+				  transition:transform 0.5s; 
+				  display:flex; 
+				  flex: 1 0 auto;
+				  justify-content:center;
+				  align-items:center; }
 		          .panel > *:first-child {transform: translateY(-100%);} 
 		          .panel.open-active > *:first-child {transform: translateY(0);} 
 		          .panel > *:last-child {transform: translateY(100%);flex-grow: 1;}
@@ -366,7 +388,7 @@
 			      }
 		              .togglers_txt  {
 				      padding:1%; 
-				      display:; 
+				      display:none; 
 				      background-color: white;
 				      border-bottom:2px solid black;
 				      color:black;
