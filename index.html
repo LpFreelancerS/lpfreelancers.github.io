@@ -3,237 +3,349 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LP Freelancer Services | Agencia de Desarrollo Web y Marketing Digital</title>
+  <title>LP Freelancer Services | Soluciones Web, Pstore y Capacitaciones</title>
   
   <!-- Metadatos SEO -->
-  <meta name="description" content="Estrategia de Marca, SEO/SEM, Gestión de Redes Sociales, Web Design, Producción Multimedia, Digital Marketing, Consultoría y Email Marketing." />
+  <meta name="description" content="Catálogos Web PWA con IA, Desarrollo Web, Portafolio de Proyectos, SEO/SEM y Capacitaciones Profesionales." />
   <meta name="author" content="Ivan Guillermo Lopez Pedreañez" />
   <meta name="robots" content="index, follow" />
   
-  <!-- Open Graph -->
+  <!-- Open Graph / WhatsApp / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://lpfreelancers.com/" />
   <meta property="og:title" content="LP Freelancer Services | Soluciones Digitales y Capacitación" />
-  <meta property="og:description" content="Transformamos tu negocio con estrategias de marketing, diseño web a medida y capacitaciones clave para crecer." />
+  <meta property="og:description" content="Automatiza tu inventario con Pstore, descubre nuestros proyectos realizados y potencia tu marca." />
   <meta property="og:image" content="LP_FreelancerS_logo.png" />
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LP Freelancer Services" />
+  <meta name="twitter:description" content="Desarrollo Web, Catálogos PWA con IA, Portafolio y Cursos." />
+  <meta name="twitter:image" content="LP_FreelancerS_logo.png" />
+
+  <!-- Favicon y Fuentes -->
   <link rel="shortcut icon" href="LP_FreelancerS_logo.png" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  
+  <!-- Iconos FontAwesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS Principal -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Header / Navegación -->
   <header class="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">
         <img src="LP_FreelancerS_logo.png" alt="LP Freelancer Services Logo" />
         <span>LP Freelancers</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
         <i class="fa-solid fa-bars"></i>
       </button>
+
       <nav class="nav-menu" id="navMenu">
         <a href="#" class="nav-link">Inicio</a>
+        <a href="#pstore" class="nav-link">Pstore (PWA)</a>
+        <a href="#portafolio" class="nav-link">Proyectos</a>
         <a href="#servicios" class="nav-link">Servicios</a>
         <a href="#capacitaciones" class="nav-link">Capacitaciones</a>
-        <a href="#partners" class="nav-link">Stack Tecnológico</a>
         <a href="#contacto" class="nav-link">Contacto</a>
       </nav>
     </div>
   </header>
 
+  <!-- Hero Principal -->
   <section class="hero-slider">
     <div class="slide active">
       <img src="LP_FreelancerS.png" alt="Crecimiento Digital y Soluciones Web" />
       <div class="slide-caption">
         <h1>Somos Tu Camino <span>hacia el crecimiento</span></h1>
+        <a href="#pstore" class="btn btn-primary">Conoce Pstore <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
 
   <main>
-    <!-- SECCIÓN DE LOS 8 SERVICIOS COMPLETOS -->
-    <section id="servicios" class="section container">
-      <h2 class="section-title">Nuestros Servicios</h2>
-      
-      <div class="services-grid">
-        <article class="service-card">
-          <img src="serv_marca_digital.png" alt="Estrategia de Marca Digital" class="service-img" />
-          <div class="service-content">
-            <button class="accordion-btn">1. Estrategia de Marca Digital <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="accordion-panel">
-              <p>Construimos el ADN digital de tu empresa para transformar tu negocio en una marca líder y reconocible. Analizamos tu mercado para desarrollar manuales de identidad visual, propuestas de valor claras y guías de estilo adaptables que garantizan una presencia profesional y coherente en todos tus canales.</p>
-            </div>
-          </div>
-        </article>
 
-        <article class="service-card">
-          <img src="serv_seo.png" alt="Posicionamiento SEO y SEM" class="service-img" />
-          <div class="service-content">
-            <button class="accordion-btn">2. Posicionamiento SEO y SEM <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="accordion-panel">
-              <p>Mejoramos tu visibilidad en buscadores para que los clientes potenciales te encuentren exactamente cuando te necesitan. Realizamos auditorías técnicas, análisis de palabras clave y optimización de contenido (SEO), combinándolo con campañas publicitarias segmentadas (SEM) para acelerar tu crecimiento digital.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="serv_redes_sociales.png" alt="Gestión de Redes Sociales" class="service-img" />
-          <div class="service-content">
-            <button class="accordion-btn">3. Gestión de Redes Sociales <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="accordion-panel">
-              <p>Creamos, planificamos y gestionamos contenido estratégico y visualmente atractivo para los perfiles de tu negocio en Instagram, Facebook, LinkedIn o TikTok. Construimos una comunidad activa en torno a tu marca para transformar seguidores en clientes reales.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="serv_web_design.png" alt="Web Design y User Experience" class="service-img" />
-          <div class="service-content">
-            <button class="accordion-btn">4. Web Design y UX <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="accordion-panel">
-              <p>Diseñamos y desarrollamos sitios web a medida, rápidos y completamente optimizados para dispositivos móviles. Creamos interfaces intuitivas (UI) centradas en la experiencia del usuario (UX), garantizando que la navegación sea fluida y orientada a la conversión.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="serv_multimedia.png" alt="Producción de Contenido Multimedia" class="service-img" />
-          <div class="service-content">
-            <button class="accordion-btn">5. Producción Multimedia <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="accordion-panel">
-              <p>Desarrollamos soluciones multimedia que elevan la calidad percibida de tu marca y enriquecen la narrativa de tu negocio. Nos encargamos de todo el proceso creativo, el guionismo y la postproducción de videos corporativos, contenido promocional y recursos gráficos interactivos.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="serv_digital_marketing.png" alt="Digital Marketing" class="service-img" />
-          <div class="service-content">
-            <button class="accordion-btn">6. Digital Marketing <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="accordion-panel">
-              <p>Potenciamos las ventas y la presencia online de tu empresa a través de estrategias multicanal adaptadas a tu sector. Nos encargamos de la gestión completa de pautas publicitarias (Paid Media), remarketing y campañas automatizadas.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="serv_posicionamiento.png" alt="Consultoría y Posicionamiento de Marca" class="service-img" />
-          <div class="service-content">
-            <button class="accordion-btn">7. Consultoría de Marca <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="accordion-panel">
-              <p>Te asesoramos en la definición del propósito, los valores y el tono de comunicación de tu empresa para construir un posicionamiento sólido en el mercado. Analizamos a tu competencia para diseñar una hoja de ruta estratégica.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="serv_email_marketing.png" alt="Email Marketing y Automatización" class="service-img" />
-          <div class="service-content">
-            <button class="accordion-btn">8. Email Marketing y Automatización <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="accordion-panel">
-              <p>Diseñamos y gestionamos campañas de email estratégicas para mantener a tu audiencia comprometida y aumentar tus ventas de forma directa. Creamos flujos automatizados de bienvenida, carritos abandonados y newsletters personalizadas.</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- SECCIÓN DE TODAS LAS CAPACITACIONES (6 CURSOS) -->
-    <section id="capacitaciones" class="section section-dark">
+    <!-- 🚀 SECCIÓN DESTACADA: PSTORE (Catálogos Digitales PWA & IA) -->
+    <section id="pstore" class="section section-dark">
       <div class="container">
-        <h2 class="section-title">Capacitaciones</h2>
-        <p class="section-subtitle">Capacitamos a freelancers y equipos de trabajo en el dominio de las herramientas digitales de alta demanda.</p>
+        <div class="badge-featured">Solución Destacada</div>
+        <h2 class="section-title">Automatiza tu Inventario con Pstore</h2>
+        <p class="section-subtitle">Tu catálogo digital activo 24/7 con tecnología de inteligencia artificial y control total de tu negocio.</p>
 
-        <div class="courses-grid">
-          <div class="course-card">
-            <h3>Excel para Freelancers: Básico</h3>
-            <span class="course-badge">12 horas</span>
-            <p>Profesionales independientes, administrativos, contadores y cualquiera que necesite organizar datos, gestionar presupuestos, crear facturas automáticas y optimizar su trabajo mediante el manejo de hojas de cálculo.</p>
-            <button class="btn btn-primary open-modal-btn" data-course="Excel para Freelancers: Básico">+ Información</button>
+        <!-- Pestañas de Planes (Sin precios visibles) -->
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="plan-starter">Plan Starter</button>
+          <button class="tab-btn" data-tab="plan-pro">Plan Pro</button>
+          <button class="tab-btn" data-tab="plan-business">Plan Business</button>
+          <button class="tab-btn" data-tab="plan-elite">Plan Elite</button>
+        </div>
+
+        <div class="tabs-content">
+          <!-- Starter -->
+          <div class="tab-pane active" id="plan-starter">
+            <div class="plan-card">
+              <h3>Plan Starter</h3>
+              <p class="plan-desc">Ideal para digitalizar tu inventario rápidamente y proyectar una imagen 100% profesional.</p>
+              <ul class="plan-features">
+                <li><i class="fa-solid fa-check"></i> Catálogo Web PWA adaptable a móviles (instalable como App)</li>
+                <li><i class="fa-solid fa-check"></i> Botón directo de contacto a WhatsApp y Redes Sociales</li>
+                <li><i class="fa-solid fa-check"></i> Buscador rápido y filtrado por categorías</li>
+                <li><i class="fa-solid fa-check"></i> Master Sheet de inventario sincronizado en Google Sheets</li>
+                <li><i class="fa-solid fa-check"></i> Formulario web intuitivo para carga de productos</li>
+                <li><i class="fa-solid fa-check"></i> Dominio .com.ve, vincular Nic.ve y SEO base</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary">Consultar Plan Starter</a>
+            </div>
           </div>
 
-          <div class="course-card">
-            <h3>Aprende a Traducir Inglés/Español</h3>
-            <span class="course-badge">24 horas</span>
-            <p>Freelancers que desean expandir sus servicios al mercado internacional, redactores, programadores, diseñadores y profesionales que necesitan comunicarse con clientes extranjeros y entender briefs en inglés.</p>
-            <button class="btn btn-primary open-modal-btn" data-course="Aprende a Traducir Inglés/Español">+ Información</button>
+          <!-- Pro -->
+          <div class="tab-pane" id="plan-pro">
+            <div class="plan-card">
+              <h3>Plan Pro</h3>
+              <p class="plan-desc">Para comercios que necesitan organizar pedidos, manejar clientes y cerrar ventas eficientemente.</p>
+              <ul class="plan-features">
+                <li><i class="fa-solid fa-check"></i> Todo lo del Plan Starter incluido</li>
+                <li><i class="fa-solid fa-check"></i> Carrito de compras funcional y multi-fotos por producto</li>
+                <li><i class="fa-solid fa-check"></i> Categorías multinivel y Precios duales (USD / Bs BCV)</li>
+                <li><i class="fa-solid fa-check"></i> Master Sheet con Registro de Clientes y Pedidos</li>
+                <li><i class="fa-solid fa-check"></i> Configuración de Perfil en Google Business (Google Maps)</li>
+                <li><i class="fa-solid fa-check"></i> Chat Crisp integrado y comprobantes digitales</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary">Consultar Plan Pro</a>
+            </div>
           </div>
 
-          <div class="course-card">
-            <h3>Intro al Desarrollo Web (HTML, CSS y JS)</h3>
-            <span class="course-badge">24 horas</span>
-            <p>Personas interesadas en incursionar en el mundo del desarrollo web, emprendedores que quieren gestionar su propia presencia digital y creativos que desean ampliar su perfil profesional ofreciendo servicios web.</p>
-            <button class="btn btn-primary open-modal-btn" data-course="Intro al Desarrollo Web (HTML, CSS y JS)">+ Información</button>
+          <!-- Business -->
+          <div class="tab-pane" id="plan-business">
+            <div class="plan-card">
+              <h3>Plan Business</h3>
+              <p class="plan-desc">Para marcas que buscan fidelizar clientes, alto rendimiento web y analítica avanzada.</p>
+              <ul class="plan-features">
+                <li><i class="fa-solid fa-check"></i> Todo lo del Plan Pro incluido</li>
+                <li><i class="fa-solid fa-check"></i> Sección "Mis Favoritos", Notificaciones Push y Filtros Avanzados</li>
+                <li><i class="fa-solid fa-check"></i> Presencia en Google Merchant Center (Pestaña Shopping)</li>
+                <li><i class="fa-solid fa-check"></i> Dashboard Web de Analítica con 10 gráficos seleccionables</li>
+                <li><i class="fa-solid fa-check"></i> Chat Crisp con Bot de respuestas automáticas y FAQ</li>
+                <li><i class="fa-solid fa-check"></i> Generador automático de Códigos QR para mesas o empaques</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary">Consultar Plan Business</a>
+            </div>
           </div>
 
-          <div class="course-card">
-            <h3>Excel para Freelancers: Intermedio</h3>
-            <span class="course-badge">12 horas</span>
-            <p>Profesionales independientes, administrativos y contadores con nivel básico de Excel que necesiten incrementar sus conocimientos y habilidad en el manejo avanzado de hojas de cálculo.</p>
-            <button class="btn btn-primary open-modal-btn" data-course="Excel para Freelancers: Intermedio">+ Información</button>
-          </div>
-
-          <div class="course-card">
-            <h3>Copywriting: El Arte de Escribir para Vender</h3>
-            <span class="course-badge">8 horas</span>
-            <p>Redactores, Community Managers, freelancers de marketing y dueños de e-commerce que necesitan mejorar sus textos (correos, anuncios, páginas web) para persuadir a su audiencia y aumentar sus tasas de conversión.</p>
-            <button class="btn btn-primary open-modal-btn" data-course="Copywriting: El Arte de Escribir para Vender">+ Información</button>
-          </div>
-
-          <div class="course-card">
-            <h3>IA para Productividad y Creación</h3>
-            <span class="course-badge">10 horas</span>
-            <p>Creadores de contenido, redactores y profesionales que buscan automatizar tareas repetitivas, eliminar el bloqueo creativo y multiplicar su capacidad de producción con herramientas de IA generativa.</p>
-            <button class="btn btn-primary open-modal-btn" data-course="IA para Productividad y Creación">+ Información</button>
+          <!-- Elite -->
+          <div class="tab-pane" id="plan-elite">
+            <div class="plan-card">
+              <h3>Plan Elite</h3>
+              <p class="plan-desc">La solución digital definitiva con Asistente Virtual con IA y personalización total.</p>
+              <ul class="plan-features">
+                <li><i class="fa-solid fa-check"></i> Todo lo del Plan Business incluido</li>
+                <li><i class="fa-solid fa-check"></i> Autenticación de usuarios vía Google (OAuth) y perfiles cliente</li>
+                <li><i class="fa-solid fa-check"></i> Asistente Virtual con IA "Hugo" activo 24/7 para clientes</li>
+                <li><i class="fa-solid fa-check"></i> Carga Ultra Rápida con IA Gemini Vision (Auto-catalogado por foto)</li>
+                <li><i class="fa-solid fa-check"></i> Dashboard interactivo avanzado con hasta 20 gráficos analíticos</li>
+                <li><i class="fa-solid fa-check"></i> Respaldos semanales automatizados en Google Drive</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary">Consultar Plan Elite</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- MARQUEE INFINITO CON CSS -->
-    <section id="partners" class="section">
+    <!-- 💻 SECCIÓN: PORTAFOLIO Y PROYECTOS DESARROLLADOS -->
+    <section id="portafolio" class="section container">
+      <h2 class="section-title">Nuestros Proyectos</h2>
+      <p class="section-subtitle">Una muestra de lo que somos capaces de construir para nuestros clientes.</p>
+
+      <div class="portfolio-grid">
+        <article class="portfolio-card">
+          <div class="portfolio-badge">PWA / IA</div>
+          <h3>Pstore Catálogo PWA</h3>
+          <p>Plataforma e-commerce progresiva con auto-catalogado inteligente vía IA Gemini y cierre directo en WhatsApp.</p>
+
+        </article>
+
+        <article class="portfolio-card">
+          <div class="portfolio-badge">AppSheet / Sheets</div>
+          <h3>Parley App Custom</h3>
+          <p>Aplicación móvil personalizada para gestión de datos, presupuestos y control operativo en tiempo real.</p>
+
+        </article>
+
+        <article class="portfolio-card">
+          <div class="portfolio-badge">Web Design</div>
+          <h3>Portal LP Freelancers</h3>
+          <p>Sitio corporativo interactivo integrado con chat Crisp, optimización SEO y animaciones nativas CSS.</p>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- 🛠️ SECCIÓN: SERVICIOS (Carrusel Deslizable) -->
+    <section id="servicios" class="section section-gray">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <h2 class="section-title text-left">Nuestros Servicios</h2>
+            <p class="section-subtitle text-left">Estrategias digitales integrales adaptadas a tu modelo de negocio.</p>
+          </div>
+          <div class="carousel-controls">
+            <button id="servPrev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="servNext" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div class="carousel-track-container" id="servTrack">
+          <div class="carousel-card">
+            <img src="serv_marca_digital.png" alt="Estrategia de Marca Digital" />
+            <h4>1. Estrategia de Marca Digital</h4>
+            <p>Construimos el ADN digital de tu empresa para transformar tu negocio en una marca líder y reconocible.</p>
+          </div>
+
+          <div class="carousel-card">
+            <img src="serv_seo.png" alt="Posicionamiento SEO y SEM" />
+            <h4>2. Posicionamiento SEO y SEM</h4>
+            <p>Mejoramos tu visibilidad en buscadores mediante auditorías técnicas, palabras clave y campañas SEM.</p>
+          </div>
+
+          <div class="carousel-card">
+            <img src="serv_redes_sociales.png" alt="Gestión de Redes Sociales" />
+            <h4>3. Gestión de Redes Sociales</h4>
+            <p>Creamos y gestionamos contenido estratégico en Instagram, Facebook, LinkedIn o TikTok para captar clientes.</p>
+          </div>
+
+          <div class="carousel-card">
+            <img src="serv_web_design.png" alt="Web Design y User Experience" />
+            <h4>4. Web Design y UX</h4>
+            <p>Diseñamos sitios web a medida, veloces y optimizados para dispositivos móviles centrados en conversión.</p>
+          </div>
+
+          <div class="carousel-card">
+            <img src="serv_multimedia.png" alt="Producción Multimedia" />
+            <h4>5. Producción Multimedia</h4>
+            <p>Guionismo, postproducción de videos corporativos y recursos gráficos interactivos para tu público.</p>
+          </div>
+
+          <div class="carousel-card">
+            <img src="serv_digital_marketing.png" alt="Digital Marketing" />
+            <h4>6. Digital Marketing</h4>
+            <p>Gestión completa de pautas publicitarias (Paid Media), remarketing y campañas automatizadas.</p>
+          </div>
+
+          <div class="carousel-card">
+            <img src="serv_posicionamiento.png" alt="Consultoría de Marca" />
+            <h4>7. Consultoría de Marca</h4>
+            <p>Asesoría en propósito, tono de comunicación y diseño de hoja de ruta estratégica frente a la competencia.</p>
+          </div>
+
+          <div class="carousel-card">
+            <img src="serv_email_marketing.png" alt="Email Marketing y Automatización" />
+            <h4>8. Email Marketing</h4>
+            <p>Flujos automatizados de bienvenida, carritos abandonados y newsletters estratégicas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🎓 SECCIÓN: CAPACITACIONES (Carrusel Deslizable) -->
+    <section id="capacitaciones" class="section container">
+      <div class="section-header-flex">
+        <div>
+          <h2 class="section-title text-left">Capacitaciones</h2>
+          <p class="section-subtitle text-left">Domina las herramientas digitales de mayor demanda en el mercado actual.</p>
+        </div>
+        <div class="carousel-controls">
+          <button id="coursePrev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <button id="courseNext" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="carousel-track-container" id="courseTrack">
+        <div class="carousel-card course-item">
+          <span class="course-badge">12 horas</span>
+          <h4>Excel para Freelancers: Básico</h4>
+          <p>Organiza datos, gestiona presupuestos y crea facturas automáticas con hojas de cálculo.</p>
+          <button class="btn btn-primary open-modal-btn" data-course="Excel para Freelancers: Básico">+ Información</button>
+        </div>
+
+        <div class="carousel-card course-item">
+          <span class="course-badge">24 horas</span>
+          <h4>Aprende a Traducir Inglés/Español</h4>
+          <p>Expande tus servicios al mercado internacional y redacta contenidos técnicos/comerciales.</p>
+          <button class="btn btn-primary open-modal-btn" data-course="Aprende a Traducir Inglés/Español">+ Información</button>
+        </div>
+
+        <div class="carousel-card course-item">
+          <span class="course-badge">24 horas</span>
+          <h4>Intro al Desarrollo Web (HTML, CSS, JS)</h4>
+          <p>Incursiona en la programación web maquetando sitios responsivos y dinámicos desde cero.</p>
+          <button class="btn btn-primary open-modal-btn" data-course="Intro al Desarrollo Web">+ Información</button>
+        </div>
+
+        <div class="carousel-card course-item">
+          <span class="course-badge">12 horas</span>
+          <h4>Excel para Freelancers: Intermedio</h4>
+          <p>Eleva tus habilidades con fórmulas avanzadas, tablas dinámicas y automatización operativa.</p>
+          <button class="btn btn-primary open-modal-btn" data-course="Excel para Freelancers: Intermedio">+ Información</button>
+        </div>
+
+        <div class="carousel-card course-item">
+          <span class="course-badge">8 horas</span>
+          <h4>Copywriting: Escribir para Vender</h4>
+          <p>Escribe textos persuasivos en emails, anuncios y páginas web para maximizar conversiones.</p>
+          <button class="btn btn-primary open-modal-btn" data-course="Copywriting: Escribir para Vender">+ Información</button>
+        </div>
+
+        <div class="carousel-card course-item">
+          <span class="course-badge">10 horas</span>
+          <h4>IA para Productividad y Creación</h4>
+          <p>Automatiza tareas repetitivas y multiplica tu capacidad de producción con IA generativa.</p>
+          <button class="btn btn-primary open-modal-btn" data-course="IA para Productividad y Creación">+ Información</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK TECNOLÓGICO (Marquee Infinito) -->
+    <section id="partners" class="section section-gray">
       <h2 class="section-title">Nuestro Stack Tecnológico</h2>
       <div class="marquee-wrapper">
         <div class="marquee-track">
-          <img src="marcas/html.png" alt="HTML5" />
-          <img src="marcas/css.png" alt="CSS3" />
-          <img src="marcas/javascript.png" alt="JavaScript" />
-          <img src="marcas/node.png" alt="Node.js" />
-          <img src="marcas/seo.png" alt="SEO Google" />
-          <img src="marcas/figma.png" alt="Figma" />
-          <img src="marcas/wordpress.png" alt="WordPress" />
-          <img src="marcas/chatgpt.png" alt="ChatGPT" />
-          <img src="marcas/napkin.png" alt="Napkin AI" />
-          <img src="marcas/capcut.png" alt="CapCut" />
-          <img src="marcas/github.png" alt="GitHub" />
-          <img src="marcas/jasper.png" alt="Jasper" />
-          <img src="marcas/react.png" alt="React" />
+          <img src="html.png" alt="HTML5" />
+          <img src="css.png" alt="CSS3" />
+          <img src="javascript.png" alt="JavaScript" />
+          <img src="node.png" alt="Node.js" />
+          <img src="seo.png" alt="SEO Google" />
+          <img src="figma.png" alt="Figma" />
+          <img src="wordpress.png" alt="WordPress" />
+          <img src="chatgpt.png" alt="ChatGPT" />
+          <img src="github.png" alt="GitHub" />
 
-          <!-- Repetición para ciclo sin cortes -->
-          <img src="marcas/html.png" alt="HTML5" />
-          <img src="marcas/css.png" alt="CSS3" />
-          <img src="marcas/javascript.png" alt="JavaScript" />
-          <img src="marcas/node.png" alt="Node.js" />
-          <img src="marcas/seo.png" alt="SEO Google" />
-          <img src="marcas/figma.png" alt="Figma" />
-          <img src="marcas/wordpress.png" alt="WordPress" />
-          <img src="marcas/chatgpt.png" alt="ChatGPT" />
-          <img src="marcas/napkin.png" alt="Napkin AI" />
-          <img src="marcas/capcut.png" alt="CapCut" />
-          <img src="marcas/github.png" alt="GitHub" />
-          <img src="marcas/jasper.png" alt="Jasper" />
-          <img src="marcas/react.png" alt="React" />
-          
+          <!-- Repetición para loop infinito continuo -->
+          <img src="html.png" alt="HTML5" />
+          <img src="css.png" alt="CSS3" />
+          <img src="javascript.png" alt="JavaScript" />
+          <img src="node.png" alt="Node.js" />
+          <img src="seo.png" alt="SEO Google" />
+          <img src="figma.png" alt="Figma" />
+          <img src="wordpress.png" alt="WordPress" />
+          <img src="chatgpt.png" alt="ChatGPT" />
+          <img src="github.png" alt="GitHub" />
         </div>
       </div>
     </section>
 
+    <!-- Contacto -->
     <section id="contacto" class="section container">
       <h2 class="section-title">Contacto</h2>
+      <p class="section-subtitle">Ponte en contacto para cotizaciones personalizadas sobre Pstore, proyectos web o cursos.</p>
       <div class="contact-info">
         <p><i class="fa-solid fa-location-dot"></i> San Felipe, Venezuela</p>
         <p><i class="fa-solid fa-phone"></i> (+58) 412 6216661</p>
@@ -243,6 +355,7 @@
 
   </main>
 
+  <!-- Modal Cursos -->
   <div id="courseModal" class="modal-overlay">
     <div class="modal-content">
       <button class="modal-close" id="modalClose">&times;</button>
@@ -252,6 +365,7 @@
     </div>
   </div>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="social-links">
       <a href="https://www.facebook.com/lpfreelancers/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -262,7 +376,6 @@
     <p>&copy; 2026 LP Freelancer Services. Todos los derechos reservados.</p>
   </footer>
 
-  
   <script src="lpfs.js"></script>
 </body>
 </html>
