@@ -6,7 +6,8 @@
   --secondary-color: #fbbc05;
   --dark-color: #1a1a1a;
   --light-color: #ffffff;
-  --gray-bg: #f4f6f8;
+  --gray-bg: #f8f9fa;
+  --border-color: #e2e8f0;
   --text-color: #333333;
   --font-heading: 'Economica', sans-serif;
   --font-body: 'Lato', sans-serif;
@@ -52,22 +53,30 @@ img {
   color: var(--light-color);
 }
 
+.section-gray {
+  background-color: var(--gray-bg);
+}
+
 .section-title {
   font-family: var(--font-heading);
   font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
 .section-subtitle {
   text-align: center;
   margin-bottom: 2.5rem;
-  opacity: 0.9;
+  opacity: 0.85;
+}
+
+.text-left {
+  text-align: left !important;
 }
 
 /* ==========================================================================
-   Navegación / Header (Flexbox)
+   Navegación / Header
    ========================================================================== */
 .navbar {
   position: fixed;
@@ -134,19 +143,13 @@ img {
   margin-top: 60px;
   position: relative;
   background-color: var(--primary-color);
-  overflow: hidden;
-}
-
-.slide {
-  position: relative;
-  text-align: center;
 }
 
 .slide img {
   width: 100%;
-  max-height: 450px;
+  max-height: 420px;
   object-fit: cover;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .slide-caption {
@@ -155,6 +158,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--light-color);
+  text-align: center;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
@@ -162,6 +166,7 @@ img {
   font-family: var(--font-heading);
   font-size: 3rem;
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .slide-caption span {
@@ -171,99 +176,230 @@ img {
 }
 
 /* ==========================================================================
-   Servicios (CSS Grid + Acordeón Vanilla JS)
+   Sección Pstore (Pestañas de Planes)
    ========================================================================== */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
-
-.service-card {
-  background: var(--gray-bg);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-.service-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.service-content {
-  padding: 1rem;
-}
-
-.accordion-btn {
-  width: 100%;
-  background: none;
-  border: none;
-  text-align: left;
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
+.badge-featured {
+  display: table;
+  margin: 0 auto 0.5rem auto;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
   font-weight: 700;
-  cursor: pointer;
+}
+
+.tabs-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
-.accordion-panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
+.tab-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: rgba(255,255,255,0.1);
+  color: var(--light-color);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: var(--transition);
 }
 
-.accordion-panel p {
-  padding-top: 0.5rem;
+.tab-btn.active, .tab-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  border-color: var(--secondary-color);
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.plan-card h3 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.plan-desc {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.plan-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.plan-features li {
   font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.plan-features i {
+  color: var(--secondary-color);
 }
 
 /* ==========================================================================
-   Capacitaciones (Grid)
+   Portafolio
    ========================================================================== */
-.courses-grid {
+.portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.course-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.portfolio-card {
+  background: var(--light-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.portfolio-badge {
+  display: inline-block;
+  background-color: var(--gray-bg);
+  border: 1px solid var(--border-color);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.portfolio-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   Carruseles Interactivos (Servicios y Cursos)
+   ========================================================================== */
+.section-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-controls button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: var(--light-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.carousel-controls button:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.carousel-track-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel-track-container::-webkit-scrollbar {
+  display: none; /* Chrome / Safari */
+}
+
+.carousel-card {
+  min-width: 280px;
+  max-width: 320px;
+  flex: 0 0 auto;
+  background: var(--light-color);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
-  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.carousel-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.course-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  color: var(--secondary-color);
-}
-
 .course-badge {
-  display: inline-block;
+  align-self: flex-start;
   background-color: var(--primary-color);
   color: var(--light-color);
-  padding: 0.2rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  margin: 0.8rem 0;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
 }
 
+/* ==========================================================================
+   Botones y Elementos Generales
+   ========================================================================== */
 .btn {
+  display: inline-block;
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 4px;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
   transition: var(--transition);
   text-transform: uppercase;
 }
@@ -277,15 +413,11 @@ img {
   background-color: #e0a800;
 }
 
-/* ==========================================================================
-   Marquee Infinito con @keyframes (CSS puro)
-   ========================================================================== */
+/* Marquee */
 .marquee-wrapper {
   overflow: hidden;
   width: 100%;
-  background: var(--light-color);
-  padding: 1.5rem 0;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  padding: 1rem 0;
 }
 
 .marquee-track {
@@ -296,14 +428,9 @@ img {
 }
 
 .marquee-track img {
-  height: 50px;
+  height: 45px;
   width: auto;
   filter: grayscale(80%);
-  transition: var(--transition);
-}
-
-.marquee-track img:hover {
-  filter: grayscale(0%);
 }
 
 @keyframes scrollMarquee {
@@ -311,16 +438,10 @@ img {
   100% { transform: translateX(-50%); }
 }
 
-/* ==========================================================================
-   Contacto y Footer
-   ========================================================================== */
+/* Contacto & Footer */
 .contact-info {
   text-align: center;
-  font-size: 1.2rem;
-}
-
-.contact-info p {
-  margin: 0.5rem 0;
+  font-size: 1.1rem;
 }
 
 .footer {
@@ -328,38 +449,28 @@ img {
   color: var(--light-color);
   text-align: center;
   padding: 2rem 0;
-  margin-top: 2rem;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
 .social-links a {
   color: var(--light-color);
-  font-size: 1.2rem;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 1px solid var(--light-color);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: var(--transition);
 }
 
-.social-links a:hover {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-
-/* ==========================================================================
-   Modal
-   ========================================================================== */
+/* Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -397,14 +508,8 @@ img {
   cursor: pointer;
 }
 
-/* ==========================================================================
-   Media Queries (Responsive Adaptativo)
-   ========================================================================== */
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
+  .nav-toggle { display: block; }
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -415,18 +520,8 @@ img {
     align-items: center;
     padding: 1.5rem 0;
     display: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .slide-caption h1 {
-    font-size: 2rem;
-  }
-
-  .slide-caption span {
-    font-size: 1.2rem;
-  }
+  .nav-menu.active { display: flex; }
+  .slide-caption h1 { font-size: 2rem; }
+  .section-header-flex { flex-direction: column; align-items: flex-start; gap: 1rem; }
 }
