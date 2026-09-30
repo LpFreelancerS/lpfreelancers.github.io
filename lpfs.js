@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Menú Navegación Hamburguesa
+  // 1. Menú Móvil Hamburguesa
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
 
@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.toggle('active');
     });
 
-    // Cerrar menú al presionar un enlace
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -17,24 +16,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Acordeón Desplegable para Servicios
-  const accordionBtns = document.querySelectorAll('.accordion-btn');
+  // 2. Pestañas de Pstore (Tabs sin precios)
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabPanes = document.querySelectorAll('.tab-pane');
 
-  accordionBtns.forEach(btn => {
+  tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const panel = btn.nextElementSibling;
-      const isOpen = panel.style.maxHeight;
+      const targetTab = btn.getAttribute('data-tab');
 
-      // Cierra todos los demás acordeones para mantener orden
-      document.querySelectorAll('.accordion-panel').forEach(p => p.style.maxHeight = null);
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanes.forEach(p => p.classList.remove('active'));
 
-      if (!isOpen) {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-      }
+      btn.classList.add('active');
+      document.getElementById(targetTab).classList.add('active');
     });
   });
 
-  // 3. Modal de Cursos
+  // 3. Controladores para Carruseles (Servicios y Cursos)
+  const setupCarousel = (trackId, prevBtnId, nextBtnId) => {
+    const track = document.getElementById(trackId);
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
+
+    if (track && prevBtn && nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+
+      prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+    }
+  };
+
+  setupCarousel('servTrack', 'servPrev', 'servNext');
+  setupCarousel('courseTrack', 'coursePrev', 'courseNext');
+
+  // 4. Modal de Cursos
   const modal = document.getElementById('courseModal');
   const modalCourseTitle = document.getElementById('modalCourseTitle');
   const modalClose = document.getElementById('modalClose');
@@ -56,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (modalClose) modalClose.addEventListener('click', closeModal);
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
 
-  // Cerrar al hacer clic fuera del cuadro de diálogo
   window.addEventListener('click', (event) => {
     if (event.target === modal) {
       closeModal();
