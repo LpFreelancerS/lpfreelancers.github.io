@@ -274,13 +274,15 @@ img {
   gap: 2rem;
 }
 
-.portfolio-card {
+.portfolio-card, .portfolio-card:link, .portfolio-card:visited  {
   background: var(--light-color);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: var(--transition);
+  transition: var(--transition); 
+  text-decoration: none;
+  color: #333333;
 }
 
 .portfolio-card:hover {
