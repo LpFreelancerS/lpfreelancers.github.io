@@ -43,7 +43,7 @@ const MATERIAS_CONFIG = {
     codigo: "ingles",
     nombre: "Inglés Técnico A",
     descripcion: "Comprensión de textos técnicos, redacción de correos profesionales y comunicación básica.",
-    imagen: "translation_1.jpeg",
+    imagen: "ingles_1.png",
     scriptUrl: "https://script.google.com/macros/s/AKfycbyhcJcZlg-JWzBwl5Y627_5H2nfXQQoZT6iw8oCLL4PmNABLmzx0wrTLhNoMdSdz00k6A/exec",
     spreadsheetId: "1OuEnObFK_7Un4d25rH5llIim5X8kDRp4NnGQlo7GRQM"
   }
