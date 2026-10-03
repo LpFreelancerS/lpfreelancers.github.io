@@ -20,8 +20,8 @@ const MATERIAS_CONFIG = {
     nombre: "Inglés A1-A2",
     descripcion: "Comprensión de textos técnicos, redacción de correos profesionales y comunicación básica.",
     imagen: "ingles_1.png",
-    scriptUrl: "https://script.google.com/macros/s/AKfycbxVlqPxzjnwLnjWyHEGDemeB8KYRNdpnh3W_-_9rzoXhZqV6Vn95t3dnYOacGhASIaA2w/exec",
-    spreadsheetId: "1OuEnObFK_7Un4d25rH5llIim5X8kDRp4NnGQlo7GRQM"
+    scriptUrl: "https://script.google.com/macros/s/AKfycbzrIuRmiM0lgCyWe53RxTM7m_XcT_vP9KBRA0sETisTVspYlx6Q8jdL0fUaFqZCfKw6BQ/exec",
+    spreadsheetId: "1MoBIJDo0qY2x7HXNz6QYn0jhJDfG6CwRXq9apY4bePs"
   },
    "excel2": {
     codigo: "excel2",
