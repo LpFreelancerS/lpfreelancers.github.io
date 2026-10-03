@@ -28,7 +28,7 @@ const MATERIAS_CONFIG = {
     nombre: "Google Sheets: Basico",
     descripcion: "Organización de datos, fórmulas esenciales, gestión de presupuestos y tablas dinámicas.",
     imagen: "google_sheets.png", 
-    scriptUrl: "https://script.google.com/macros/s/AKfycby74QRdNkKjtV_I_auAImfvpi2BJMrzUbN6RdwuIDpPnDzua9WaXCd-xVisA45Z5252/exec",
+    scriptUrl: "https://script.google.com/macros/s/AKfycbz2zvK7tcAw2VFb-z2tGPkfWMn2UDEt4ybNXMvs4ZteeBHR2YrZHd5buL2diQByIIjb/exec",
     spreadsheetId: "1IFEm2WqOyne8Cbb9jOI79uHBBN81RauC-ANSt3HI70o"
   },
   "web1": {
@@ -36,7 +36,7 @@ const MATERIAS_CONFIG = {
     nombre: "Introducción al Desarrollo Web I",
     descripcion: "Fundamentos sólidos de HTML5, CSS3 y maquetación web responsiva profesional.",
     imagen: "web_dev.png",
-    scriptUrl: "https://script.google.com/macros/s/AKfycbyVVmX4dJ1eBNpn2ezcjLDu23R8smSh5Z1-nFgUUVA3OBKfMAqUUk3FT0J8LZT4BKF03w/exec",
+    scriptUrl: "https://script.google.com/macros/s/AKfycbz2zvK7tcAw2VFb-z2tGPkfWMn2UDEt4ybNXMvs4ZteeBHR2YrZHd5buL2diQByIIjb/exec",
     spreadsheetId: "1VnHCGsK6fXQ1CxU9e9_QKiQUx0NrdhROuP7M5dGl-vE"
   },    
   "ingles": {
@@ -44,7 +44,7 @@ const MATERIAS_CONFIG = {
     nombre: "Inglés Técnico A",
     descripcion: "Comprensión de textos técnicos, redacción de correos profesionales y comunicación básica.",
     imagen: "ingles_1.png",
-    scriptUrl: "https://script.google.com/macros/s/AKfycbyhcJcZlg-JWzBwl5Y627_5H2nfXQQoZT6iw8oCLL4PmNABLmzx0wrTLhNoMdSdz00k6A/exec",
+    scriptUrl: "https://script.google.com/macros/s/AKfycbxVlqPxzjnwLnjWyHEGDemeB8KYRNdpnh3W_-_9rzoXhZqV6Vn95t3dnYOacGhASIaA2w/exec",
     spreadsheetId: "1OuEnObFK_7Un4d25rH5llIim5X8kDRp4NnGQlo7GRQM"
   }
 };
