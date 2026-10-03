@@ -10,7 +10,7 @@ const MATERIAS_CONFIG = {
   "web1": {
     codigo: "web1",
     nombre: "Introducción al Desarrollo Web",
-    descripcion: "Fundamentos sólidos de HTML5, CSS3 y maquetación web responsiva profesional.",
+    descripcion: "Incursiona en la programación web maquetando sitios responsivos y dinámicos desde cero",
     imagen: "web_dev.png",
     scriptUrl: "https://script.google.com/macros/s/AKfycbxaXsg1uaJ_G4Lfv88VuCCHsPgNcLLnYa9p7AKOoew4lhysutuHYuWuvrm5pKc8YR3A/exec",
     spreadsheetId: "1xzmEvfIatg-L0gzEpw1YYwtH24kG8jeORueeu4mVz6o"
@@ -26,7 +26,7 @@ const MATERIAS_CONFIG = {
    "excel2": {
     codigo: "excel2",
     nombre: "Google Sheets: Intermedio",
-    descripcion: "Organización de datos, fórmulas esenciales, gestión de presupuestos y tablas dinámicas.",
+    descripcion: "Eleva tus habilidades con fórmulas avanzadas, tablas dinámicas y automatización operativa",
     imagen: "google_sheets.png", 
     scriptUrl: "https://script.google.com/macros/s/AKfycbz2zvK7tcAw2VFb-z2tGPkfWMn2UDEt4ybNXMvs4ZteeBHR2YrZHd5buL2diQByIIjb/exec",
     spreadsheetId: "1IFEm2WqOyne8Cbb9jOI79uHBBN81RauC-ANSt3HI70o"
@@ -68,6 +68,14 @@ const MATERIAS_CONFIG = {
     nombre: "Inglés C1-C2",
     descripcion: "Comprensión de textos técnicos, redacción de correos profesionales y comunicación básica.",
     imagen: "ingles_1.png",
+    scriptUrl: "https://script.google.com/macros/s/AKfycbxVlqPxzjnwLnjWyHEGDemeB8KYRNdpnh3W_-_9rzoXhZqV6Vn95t3dnYOacGhASIaA2w/exec",
+    spreadsheetId: "1OuEnObFK_7Un4d25rH5llIim5X8kDRp4NnGQlo7GRQM"
+  },
+   "copywriting": {
+    codigo: "copywriting",
+    nombre: "Copywriting: Escribir para Vender",
+    descripcion: "Escribe textos persuasivos en emails, anuncios y páginas web para maximizar conversiones.",
+    imagen: "copywriting.png",
     scriptUrl: "https://script.google.com/macros/s/AKfycbxVlqPxzjnwLnjWyHEGDemeB8KYRNdpnh3W_-_9rzoXhZqV6Vn95t3dnYOacGhASIaA2w/exec",
     spreadsheetId: "1OuEnObFK_7Un4d25rH5llIim5X8kDRp4NnGQlo7GRQM"
   }
