@@ -12,8 +12,8 @@ const MATERIAS_CONFIG = {
     nombre: "Introducción al Desarrollo Web",
     descripcion: "Fundamentos sólidos de HTML5, CSS3 y maquetación web responsiva profesional.",
     imagen: "web_dev.png",
-    scriptUrl: "https://script.google.com/macros/s/AKfycbz2zvK7tcAw2VFb-z2tGPkfWMn2UDEt4ybNXMvs4ZteeBHR2YrZHd5buL2diQByIIjb/exec",
-    spreadsheetId: "1VnHCGsK6fXQ1CxU9e9_QKiQUx0NrdhROuP7M5dGl-vE"
+    scriptUrl: "https://script.google.com/macros/s/AKfycbxaXsg1uaJ_G4Lfv88VuCCHsPgNcLLnYa9p7AKOoew4lhysutuHYuWuvrm5pKc8YR3A/exec",
+    spreadsheetId: "1xzmEvfIatg-L0gzEpw1YYwtH24kG8jeORueeu4mVz6o"
   },    
   "ingles": {
     codigo: "ingles",
