@@ -11,7 +11,7 @@ const MATERIAS_CONFIG = {
     codigo: "178",
     nombre: "Matemática II",
     descripcion: "Cálculo de una variable, funciones, límites y derivadas.",
-    imagen: "web_design_long.png",
+    imagen: "google_sheets.png",
     scriptUrl: "https://script.google.com/macros/s/AKfycbxVlqPxzjnwLnjWyHEGDemeB8KYRNdpnh3W_-_9rzoXhZqV6Vn95t3dnYOacGhASIaA2w/exec",
     spreadsheetId: "1VnHCGsK6fXQ1CxU9e9_QKiQUx0NrdhROuP7M5dGl-vE"
   },    
@@ -19,7 +19,7 @@ const MATERIAS_CONFIG = {
     codigo: "768",
     nombre: "Topología de Espacios Métricos",
     descripcion: "Espacios métricos, conexidad, compacidad y continuidad.",
-    imagen: "web_design_long.png",
+    imagen: "web_dev.png",
     scriptUrl: "https://script.google.com/macros/s/AKfycbwUBkRX6Go9cXh0deNIb2SyoqmQHeogphmY_oU8oWnBMRwnIrjpHFUQ5fGvjUIWEKR0lg/exec",
     spreadsheetId: "1OuEnObFK_7Un4d25rH5llIim5X8kDRp4NnGQlo7GRQM"
   },
@@ -35,7 +35,7 @@ const MATERIAS_CONFIG = {
     codigo: "web1",
     nombre: "Introducción al Desarrollo Web I",
     descripcion: "Fundamentos sólidos de HTML5, CSS3 y maquetación web responsiva profesional.",
-    imagen: "web_design_long.png",
+    imagen: "web_dev.png",
     scriptUrl: "https://script.google.com/macros/s/AKfycbyVVmX4dJ1eBNpn2ezcjLDu23R8smSh5Z1-nFgUUVA3OBKfMAqUUk3FT0J8LZT4BKF03w/exec",
     spreadsheetId: "1VnHCGsK6fXQ1CxU9e9_QKiQUx0NrdhROuP7M5dGl-vE"
   },    
