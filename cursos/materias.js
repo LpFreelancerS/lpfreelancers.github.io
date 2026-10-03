@@ -22,11 +22,11 @@ const MATERIAS_CONFIG = {
   },
   "excel": {
     codigo: "excel",
-    nombre: "Excel Básico para Freelancers",
+    nombre: "Google Sheets: Basico",
     descripcion: "Organización de datos, fórmulas esenciales, gestión de presupuestos y tablas dinámicas.",
-    imagen: "web_design_1.png", // Puedes cambiarla luego
+    imagen: "google_sheets.png", // Puedes cambiarla luego
     scriptUrl: "https://script.google.com/macros/s/AKfycby74QRdNkKjtV_I_auAImfvpi2BJMrzUbN6RdwuIDpPnDzua9WaXCd-xVisA45Z5252/exec",
-    spreadsheetId: "1PuT49F4tYxzayYi-Xm8jy8hINjd3rxwNduD0UGE83qk"
+    spreadsheetId: "1IFEm2WqOyne8Cbb9jOI79uHBBN81RauC-ANSt3HI70o"
   },
   "web1": {
     codigo: "web1",
