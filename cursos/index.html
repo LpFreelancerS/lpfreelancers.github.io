@@ -3,30 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LP Freelancers - Cursos Académicos y Profesionales</title>
+    <title>LP Freelancers - Aula Virtual</title>
     <link rel="shortcut icon" href="LP_FreelancerS_logo.png" type="image/x-icon" />
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#fbbc05">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Identity Services (OAuth) -->
+    <!-- Google Identity Services -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <!-- FontAwesome y Fuentes -->
+    <!-- FontAwesome y Fuente Economica -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="mateuna.css">
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between font-sans">
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col justify-between">
 
-    <!-- HEADER / LOGIN -->
-    <header class="bg-white shadow-sm py-4 px-6 flex justify-between items-center z-10 sticky top-0 border-b border-slate-100">
+    <!-- POPUP / TOAST DE CAMBIO DE CURSO -->
+    <div id="curso-popup-toast" class="fixed top-20 right-6 z-50 hidden popup-curso-activo bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl border-l-4 border-amber-400 flex items-center gap-3">
+        <i class="fa fa-info-circle text-amber-400 text-xl"></i>
+        <div>
+            <p class="text-xs font-bold uppercase tracking-wider text-amber-400">Curso Actualizado</p>
+            <p id="curso-popup-text" class="text-sm font-medium">Has cambiado de curso.</p>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-xs py-3 px-6 flex justify-between items-center sticky top-0 z-40 border-b border-slate-200">
         <div class="flex items-center gap-3">
             <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-slate-700 focus:outline-none p-1">
                 <i class="fa fa-bars text-xl"></i>
             </button>
-            <div class="flex items-center gap-2">
-                <img src="LP_FreelancerS_logo.png" alt="LP Logo" class="w-8 h-8 rounded-full border border-amber-400">
-                <h1 class="text-lg font-bold text-slate-900 tracking-wide">LP Freelancers <span class="text-amber-500 text-xs uppercase px-2 py-0.5 bg-amber-50 rounded-full">Academy</span></h1>
+            <div class="flex items-center gap-2.5">
+                <img src="LP_FreelancerS_logo.png" alt="Logo" class="w-9 h-9 rounded-full border border-amber-400 object-cover">
+                <div>
+                    <h1 class="text-xl font-bold text-slate-900 leading-none">LP Freelancers</h1>
+                    <span class="text-[10px] tracking-widest uppercase text-amber-600 font-semibold">Academy</span>
+                </div>
             </div>
         </div>
 
@@ -41,138 +50,140 @@
 
         <div id="user-info" class="hidden flex items-center gap-4">
             <div class="flex items-center gap-3">
-                <div id="timers-container" class="text-right hidden sm:block">
-                    <span id="session-timer" class="block text-xs text-slate-600 font-mono">⏱️ Sesión: 00:00</span>
-                    <span id="total-study-timer" class="block text-[10px] text-slate-400 font-mono">📚 Total: 00h 00m</span>
+                <div id="timers-container" class="text-right hidden sm:block font-mono text-xs text-slate-500">
+                    <span id="session-timer" class="block">Sesión: 00:00</span>
+                    <span id="total-study-timer" class="block text-[10px] text-slate-400">Total: 0m</span>
                 </div>
-                <button onclick="toggleTimersVisibility()" class="text-xs text-slate-500 hover:text-slate-700 p-1.5 rounded-lg bg-slate-100 transition" title="Ocultar / Mostrar relojes">
-                    👁️‍🗨️
+                <button onclick="toggleTimersVisibility()" class="text-slate-400 hover:text-slate-600 p-1" title="Mostrar/Ocultar Relojes">
+                    <i class="fa fa-clock-o text-lg"></i>
                 </button>
             </div>
             <div class="text-right border-l pl-3 border-slate-200">
-                <span id="user-name" class="block font-medium text-sm text-slate-800"></span>
-                <button onclick="logoutUser()" class="text-xs text-rose-600 hover:underline bg-rose-50 px-2 py-1 rounded-lg mt-0.5 font-semibold">Salir</button>
+                <span id="user-name" class="block font-bold text-sm text-slate-800"></span>
+                <button onclick="logoutUser()" class="text-xs text-rose-600 hover:underline font-semibold">Salir</button>
             </div>
         </div>
     </header>
 
-    <!-- PANTALLA DE ACCESO RESTRINGIDO (SOLO GOOGLE) -->
+    <!-- LOGIN WRAPPER -->
     <main id="login-wrapper" class="max-w-md mx-auto p-6 flex-grow flex items-center justify-center w-full">
-        <div id="login-prompt" class="bg-white p-8 rounded-2xl shadow-md text-center w-full border border-slate-100 space-y-4">
+        <div id="login-prompt" class="bg-white p-8 rounded-2xl shadow-sm text-center w-full border border-slate-200 space-y-4">
             <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
-                🎓
+                <i class="fa fa-graduation-cap"></i>
             </div>
-            <h2 class="text-2xl font-bold text-slate-800">Aula Virtual LP Freelancers</h2>
-            <p class="text-slate-500 text-sm leading-relaxed">Inicia sesión con tu cuenta de Google verificada para acceder a los cursos en los que estás matriculado.</p>
+            <h2 class="text-2xl font-bold text-slate-900">Aula Virtual LP Freelancers</h2>
+            <p class="text-slate-500 text-sm leading-relaxed">Inicia sesión con tu cuenta de Google verificada para acceder a tus capacitaciones y cursos activos.</p>
             <div class="flex flex-col items-center gap-4 pt-2">
                 <div class="g_id_signin" data-type="standard"></div>
             </div>
         </div>
     </main>
 
-    <!-- CONTENEDOR PRINCIPAL DE LA APLICACIÓN (Oculto hasta iniciar sesión y verificar acceso) -->
+    <!-- APP CONTAINER -->
     <div id="app-container" class="hidden max-w-7xl mx-auto p-4 md:p-6 flex-grow w-full grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
         
-        <!-- MENÚ LATERAL (SIDEBAR) -->
-        <aside id="sidebar-menu" class="hidden md:block bg-white p-4 rounded-2xl shadow-sm border border-slate-100 space-y-1.5 md:col-span-1">
+        <!-- SIDEBAR -->
+        <aside id="sidebar-menu" class="hidden md:block bg-white p-4 rounded-2xl shadow-sm border border-slate-200 space-y-1.5 md:col-span-1">
             <p class="text-xs font-bold uppercase tracking-wider text-slate-400 px-3 pb-2">Navegación</p>            
             
-            <button onclick="showSection('cursos')" id="nav-cursos" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-amber-900 bg-amber-50 transition flex items-center gap-2">
-                📚 Mis Cursos Disponibles
+            <button onclick="showSection('cursos')" id="nav-cursos" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-amber-900 bg-amber-50 transition flex items-center gap-3 cursor-pointer">
+                <i class="fa fa-th-large w-4 text-center"></i> Catálogo de Cursos
             </button>
-            <button onclick="showSection('quiz')" id="nav-quiz" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📊 Evaluaciones / Quiz</button>
-            <button onclick="showSection('notas')" id="nav-notas" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📈 Mis Calificaciones</button>
-            <button onclick="showSection('estadisticas')" id="nav-estadisticas" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📊 Progreso y Efectividad</button>
-            <button onclick="showSection('fundamentacion')" id="nav-fundamentacion" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📖 Fundamentación</button>
-            <button onclick="showSection('plan')" id="nav-plan" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📑 Plan de Curso</button>
-            <button onclick="showSection('examenes')" id="nav-examenes" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">📅 Fechas de Evaluaciones</button>
-            <button onclick="showSection('contacto')" id="nav-contacto" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-2">👨‍🏫 Soporte y Contacto</button>
+            <button onclick="showSection('quiz')" id="nav-quiz" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-3 cursor-pointer">
+                <i class="fa fa-question-circle w-4 text-center"></i> Evaluación / Quiz
+            </button>
+            <button onclick="showSection('notas')" id="nav-notas" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-3 cursor-pointer">
+                <i class="fa fa-star w-4 text-center"></i> Mis Calificaciones
+            </button>
+            <button onclick="showSection('estadisticas')" id="nav-estadisticas" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-3 cursor-pointer">
+                <i class="fa fa-bar-chart w-4 text-center"></i> Progreso y Efectividad
+            </button>
+            <button onclick="showSection('fundamentacion')" id="nav-fundamentacion" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-3 cursor-pointer">
+                <i class="fa fa-book w-4 text-center"></i> Fundamentación
+            </button>
+            <button onclick="showSection('plan')" id="nav-plan" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-3 cursor-pointer">
+                <i class="fa fa-list-alt w-4 text-center"></i> Plan de Curso
+            </button>
+            <button onclick="showSection('examenes')" id="nav-examenes" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-3 cursor-pointer">
+                <i class="fa fa-calendar w-4 text-center"></i> Fechas de Evaluaciones
+            </button>
+            <button onclick="showSection('contacto')" id="nav-contacto" class="w-full text-left px-3 py-2.5 rounded-xl font-medium text-sm text-slate-600 hover:bg-slate-50 transition flex items-center gap-3 cursor-pointer">
+                <i class="fa fa-users w-4 text-center"></i> Soporte y Profesores
+            </button>
         </aside>
 
-        <!-- CUERPO CENTRAL DINÁMICO -->
+        <!-- MAIN CONTENT AREA -->
         <main class="md:col-span-3 space-y-6">
             
-            <!-- VISTA DE SELECCIÓN DE CURSOS (Se muestra al entrar) -->
+            <!-- INDICADOR DE CURSO ACTIVO SUPERIOR -->
+            <div id="curso-activo-indicator" class="hidden bg-white p-3 rounded-xl border border-slate-200 shadow-xs text-xs font-medium text-slate-600 flex items-center justify-between">
+                <!-- Se llena dinámicamente -->
+            </div>
+
+            <!-- VISTA: CURSOS -->
             <div id="view-cursos" class="space-y-6">
-                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
-                    <h2 class="text-2xl font-bold text-slate-900 mb-2">Catálogo de Cursos LP Freelancers</h2>
-                    <p class="text-slate-500 text-sm mb-6">Selecciona el curso al que deseas ingresar. El sistema verificará automáticamente si tu correo está autorizado en la lista de alumnos inscritos.</p>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-2">Selecciona un Curso</h2>
+                    <p class="text-slate-500 text-sm mb-6">El sistema validará tu correo en la lista de matriculados antes de darte acceso al contenido y evaluaciones.</p>
                     
-                    <div id="cursos-list-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <!-- Las tarjetas de cursos se cargan dinámicamente o se muestran de ejemplo -->
-                    </div>
+                    <div id="cursos-list-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
                 </div>
             </div>
 
-            <!-- VISTA DE QUIZ -->
+            <!-- VISTA: QUIZ -->
             <div id="view-quiz" class="hidden space-y-6">
-                <div class="flex items-center justify-between bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
-                    <span id="curso-activo-badge" class="text-xs font-bold px-3 py-1 bg-amber-100 text-amber-800 rounded-full">Curso Seleccionado</span>
-                    <button onclick="showSection('cursos')" class="text-xs text-amber-700 hover:underline font-semibold">Cambiar de Curso</button>
-                </div>
+                <div id="objectives-tabs-container" class="flex gap-2 bg-white p-3 rounded-2xl shadow-sm border border-slate-200 overflow-x-auto"></div>
 
-                <div id="objectives-tabs-container" class="flex gap-2 bg-white p-2 rounded-2xl shadow-sm border border-slate-100 overflow-x-auto"></div>
-
-                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200">
                     <div class="flex justify-between items-center mb-4">
-                        <span id="obj-title" class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-50 px-3 py-1 rounded-full">Cargando...</span>
-                        <span class="text-xs text-slate-400 font-medium">Evaluación Formativa</span>
+                        <span id="obj-title" class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">Módulo</span>
+                        <span class="text-xs text-slate-400 font-medium">Práctica Interactiva</span>
                     </div>
 
-                    <p id="question-text" class="text-lg font-medium text-slate-800 mb-6">Cuestionario interactivo...</p>
+                    <p id="question-text" class="text-lg font-medium text-slate-800 mb-6">Cargando...</p>
                     <div id="options-container" class="space-y-3 mb-6"></div>
 
                     <button id="submit-btn" onclick="submitQuiz()" disabled class="w-full bg-slate-200 text-slate-400 font-medium py-3 rounded-xl transition cursor-not-allowed">Enviar Respuesta</button>
                 </div>
 
-                <div id="result-container" class="hidden bg-emerald-50 border border-emerald-100 p-6 rounded-2xl text-center">
-                    <h3 class="text-xl font-bold text-emerald-800 mb-2">¡Respuesta Registrada!</h3>
-                    <button onclick="loadQuestionsForCurrentObjective()" class="bg-emerald-600 text-white px-6 py-2.5 rounded-xl text-sm font-medium hover:bg-emerald-700 transition shadow-sm">Siguiente Pregunta</button>
-                </div>
+                <div id="result-container" class="hidden p-6 rounded-2xl text-center"></div>
             </div>
 
-            <!-- VISTA DINÁMICA GENERAL -->
-            <div id="view-dynamic" class="hidden bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100"></div>
+            <!-- VISTA DINÁMICA GENERAL (Plan, Fundamentación, Notas, Exámenes, Contacto) -->
+            <div id="view-dynamic" class="hidden bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200"></div>
 
-            <!-- VISTA DE ESTADÍSTICAS -->
-            <div id="view-estadisticas" class="hidden bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-100 space-y-6">
+            <!-- VISTA: ESTADÍSTICAS -->
+            <div id="view-estadisticas" class="hidden bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 space-y-6">
                 <div class="flex justify-between items-center border-b pb-4">
-                    <div>
-                        <h2 class="text-xl font-bold text-slate-800">📊 Panel de Efectividad y Progreso</h2>
-                        <p class="text-xs text-slate-500 mt-1">Desempeño y porcentaje de aciertos por módulo o objetivo.</p>
-                    </div>
-                    <button onclick="cargarEstadisticasUsuario()" class="bg-amber-50 text-amber-800 hover:bg-amber-100 px-3 py-1.5 rounded-xl text-xs font-semibold transition">
-                        🔄 Actualizar
+                    <h2 class="text-xl font-bold text-slate-900">Progreso y Efectividad</h2>
+                    <button onclick="cargarEstadisticasUsuario()" class="text-xs bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-xl font-semibold transition cursor-pointer">
+                        <i class="fa fa-refresh mr-1"></i> Actualizar
                     </button>
                 </div>
-                <div id="estadisticas-container" class="space-y-4">
-                    <p class="text-sm text-slate-400 text-center py-8">Cargando métricas...</p>
-                </div>
+                <div id="estadisticas-container" class="space-y-4"></div>
             </div>
 
         </main>
     </div>
 
-    <!-- MODAL DE ACCESO DENEGADO -->
-    <div id="denied-modal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+    <!-- MODAL ACCESO DENEGADO -->
+    <div id="denied-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
         <div class="bg-white rounded-2xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl">
             <div class="w-16 h-16 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
-                🔒
+                <i class="fa fa-lock"></i>
             </div>
-            <h3 class="text-xl font-bold text-slate-900">Acceso No Autorizado</h3>
-            <p id="denied-message" class="text-sm text-slate-600">Tu correo electrónico no se encuentra registrado en la lista de alumnos autorizados para este curso.</p>
-            <button onclick="cerrarModalAccesoDenegado()" class="w-full bg-slate-900 text-white font-medium py-2.5 rounded-xl text-sm transition hover:bg-slate-800">
-                Regresar al Catálogo
+            <h3 class="text-xl font-bold text-slate-900">Acceso Restringido</h3>
+            <p class="text-sm text-slate-600">Tu correo electrónico no se encuentra registrado en la lista de alumnos de este curso.</p>
+            <button onclick="cerrarModalAccesoDenegado()" class="w-full bg-slate-900 text-white font-medium py-2.5 rounded-xl text-sm transition hover:bg-slate-800 cursor-pointer">
+                Entendido
             </button>
         </div>
     </div>
 
-    <!-- FOOTER -->
     <footer class="text-center py-6 text-xs text-slate-400 border-t bg-white mt-auto">
-        LP Freelancer Services • Capacitaciones Académicas y Profesionales • San Felipe, Venezuela 2026
+        LP Freelancers Academy • San Felipe, Venezuela 2026
     </footer>
 
-    <!-- SCRIPT DE LÓGICA -->
     <script src="materias.js"></script>
     <script src="mateuna.js"></script>
 </body>
