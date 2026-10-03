@@ -19,7 +19,7 @@ const MATERIAS_CONFIG = {
     descripcion: "Espacios métricos, conexidad, compacidad y continuidad.",
     scriptUrl: "https://script.google.com/macros/s/AKfycbwUBkRX6Go9cXh0deNIb2SyoqmQHeogphmY_oU8oWnBMRwnIrjpHFUQ5fGvjUIWEKR0lg/exec",
     spreadsheetId: "1OuEnObFK_7Un4d25rH5llIim5X8kDRp4NnGQlo7GRQM"
-  }
+  },
   "excel": {
     codigo: "excel",
     nombre: "Excel Básico para Freelancers",
