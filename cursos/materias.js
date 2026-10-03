@@ -1,4 +1,3 @@
-// materias.js - Catálogo de Cursos LP Freelancers
 const MATERIAS_CONFIG = {
   "175": {
     codigo: "175",
