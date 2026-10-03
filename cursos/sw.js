@@ -2,15 +2,18 @@ const CACHE_NAME = 'mateuna-v1';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './mateuna.js',
-  './materias.js',
-  './mateuna.css',
+  './lpfs_cursos.js',
+  './cursos.js',
+  './cursos.css',
   './preguntas.csv',
   './ejercicios.csv',
   './estudio.html',
-  './pracrica.html',
+  './practica.html',
   './manifest.json',
-  './assets/una_logo.png',
+  './LP_FreelancerS_logo.png',
+  './ingles_1.png',
+  './google_sheets.png',
+  './web_dev.png',
   'https://cdn.tailwindcss.com'
 ];
 
