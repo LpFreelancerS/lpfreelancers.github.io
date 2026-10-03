@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mateuna-v1';
+const CACHE_NAME = 'LPCursos-v1';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
