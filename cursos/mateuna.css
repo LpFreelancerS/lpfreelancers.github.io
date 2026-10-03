@@ -13,6 +13,9 @@ body {
   font-size: 20px;
   font-weight: 200;
 }
+header{
+  background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1));
+}
 
 /* Estilos de Botones y Tarjetas Corporativas */
 .lp-btn-primary {
