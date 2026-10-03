@@ -626,3 +626,39 @@ function cargarEstadisticasUsuario() {
             container.innerHTML = html;
         }).catch(() => container.innerHTML = `<div class="p-4 text-center text-rose-500 text-sm">Error al cargar estadísticas.</div>`);
 }
+
+function handleCredentialResponse(response) {
+    const responsePayload = decodeJwtResponse(response.credential);
+    currentUser = {
+        name: responsePayload.name,
+        email: responsePayload.email,
+        picture: responsePayload.picture
+    };
+    
+    localStorage.setItem('mateuna_user', JSON.stringify(currentUser));
+    localStorage.setItem('mateuna_user_email', responsePayload.email);
+
+    renderAppUI(currentUser);
+    startSessionTimer();
+    renderizarCatalogoCursos();
+    showSection('cursos');
+}
+
+function renderAppUI(userData) {
+    document.getElementById('login-prompt')?.classList.add('hidden');
+    document.getElementById('auth-section')?.classList.add('hidden');
+    document.getElementById('user-info')?.classList.remove('hidden');
+    document.getElementById('app-container')?.classList.remove('hidden');
+    
+    const userNameElem = document.getElementById('user-name');
+    if (userNameElem) {
+        userNameElem.innerText = userData.name;
+    }
+
+    const userAvatarElem = document.getElementById('user-avatar');
+    if (userAvatarElem && userData.picture) {
+        userAvatarElem.src = userData.picture;
+    }
+
+    actualizarIndicadorCursoActivo();
+}
